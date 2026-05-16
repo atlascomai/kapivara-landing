@@ -3271,6 +3271,29 @@
     width:100%;
     height:auto;
   }
+  .final-cta-capy-only{
+    grid-template-columns:minmax(0, 1fr) !important;
+    min-height:420px;
+    padding-right:min(42vw, 470px) !important;
+  }
+  .final-cta-capy-only .cta-capy-art-wrap{
+    width:min(440px, 34vw);
+    right:4%;
+    bottom:-34px;
+  }
+  @media (max-width:820px){
+    .final-cta-capy-only{
+      min-height:auto;
+      padding-right:26px !important;
+      padding-bottom:260px !important;
+    }
+    .final-cta-capy-only .cta-capy-art-wrap{
+      width:min(310px, 78vw);
+      right:50%;
+      bottom:-48px;
+      transform:translateX(50%) rotate(3deg);
+    }
+  }
   .footer{
     padding:58px 0 66px !important;
   }
@@ -3995,7 +4018,7 @@
 <!-- FINAL CTA -->
 <section class="section" style="padding:10px 0 30px;" id="cta" data-screen-label="08 Final CTA">
   <div class="container">
-    <div class="final-cta">
+    <div class="final-cta final-cta-capy-only">
       <div>
         <h2>Adote você também<br/>a Detetive Kapi.</h2>
         <p>Fale com a <span class="accent">Detetive Kapi</span> no WhatsApp.<br/>Em 30 segundos ela já tá monitorando o que importa.</p>
@@ -4005,11 +4028,6 @@
           </span>
           <span data-cta-copy>Entrar na investigação</span>
         </a>
-      </div>
-      <div class="cta-proof">
-        <div class="cta-proof-item"><span class="cta-proof-icon">1</span><span><strong>Começa no WhatsApp</strong>Sem app novo, sem cadastro longo.</span></div>
-        <div class="cta-proof-item"><span class="cta-proof-icon">2</span><span><strong>Você escolhe a missão</strong>Produto, categoria, marca ou link.</span></div>
-        <div class="cta-proof-item"><span class="cta-proof-icon">3</span><span><strong>Aviso só quando importa</strong>O foco é queda boa, não barulho.</span></div>
       </div>
       <picture class="cta-capy-art-wrap">
         <source type="image/webp" srcset="assets/savings-480.webp 480w, assets/savings.webp 1313w" sizes="(max-width: 900px) 82vw, 28vw" />
