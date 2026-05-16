@@ -201,7 +201,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Anton&family=Bebas+Neue&family=Oswald:wght@600;700&family=Abril+Fatface&family=Archivo+Black&family=IM+Fell+English+SC&family=Rozha+One&family=Permanent+Marker&family=Caveat:wght@600;700&family=Special+Elite&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Anton&family=Bebas+Neue&family=Oswald:wght@600;700&family=Abril+Fatface&family=Archivo+Black&family=IM+Fell+English+SC&family=Rozha+One&family=Permanent+Marker&family=Caveat:wght@600;700&family=Special+Elite&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -3933,6 +3933,212 @@
     }
   }
 
+  /* Requested polish: Bagel titles, sticker ticker, QR and mobile scale */
+  :root{
+    --title-font:'Bagel Fat One', 'Archivo Black', 'Anton', system-ui, sans-serif;
+  }
+  .capy-headline,
+  .section-title,
+  .compare-title,
+  .final-cta h2,
+  .seo-search-card h2,
+  #como-funciona .step h3,
+  .benefit-card h3,
+  .compare-card h3,
+  .faq summary{
+    font-family:var(--title-font) !important;
+    font-weight:400 !important;
+    letter-spacing:.01em !important;
+  }
+  .capy-headline{
+    letter-spacing:.005em !important;
+  }
+  .hero-ticker{
+    background:#fff15d !important;
+    border-top:6px solid #050504 !important;
+    border-bottom:6px solid #050504 !important;
+    box-shadow:0 9px 0 rgba(0,0,0,.55) !important;
+  }
+  .hero-ticker-track{
+    gap:16px !important;
+    padding:13px 18px !important;
+    color:#050504 !important;
+    font-family:var(--title-font) !important;
+    font-size:clamp(22px, 2.5vw, 32px) !important;
+    font-style:normal !important;
+    letter-spacing:.01em !important;
+  }
+  .hero-ticker-track span{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    padding:8px 18px 10px;
+    border:5px solid #050504;
+    border-radius:18px;
+    background:#f7f5ef;
+    color:#050504 !important;
+    box-shadow:5px 6px 0 rgba(0,0,0,.62);
+    transform:rotate(-2deg);
+  }
+  .hero-ticker-track span:nth-of-type(2n){
+    background:#58c263;
+    transform:rotate(2deg);
+  }
+  .hero-ticker-track span:nth-of-type(3n){
+    background:#ec4aa0;
+    color:#fff !important;
+    transform:rotate(-1deg);
+  }
+  .hero-ticker-track span:nth-of-type(4n){
+    background:#050504;
+    color:#fff15d !important;
+  }
+  .hero-ticker-icon{
+    width:46px !important;
+    height:46px !important;
+    filter:drop-shadow(3px 4px 0 rgba(0,0,0,.62)) !important;
+  }
+  .qr-link{
+    position:relative;
+    display:block;
+    width:min(330px, 80vw);
+    aspect-ratio:1;
+    margin:0 auto 14px;
+    border:8px solid #050504;
+    background:#fff;
+    box-shadow:10px 12px 0 rgba(0,0,0,.68);
+    overflow:hidden;
+  }
+  .qr-image{
+    display:block;
+    width:100%;
+    height:100%;
+  }
+  .qr-capy{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:96px;
+    height:96px;
+    transform:translate(-50%, -50%);
+    object-fit:cover;
+    object-position:center top;
+    border:7px solid #f7f5ef;
+    border-radius:22px;
+    background:#f7f5ef;
+    box-shadow:0 0 0 5px #050504, 5px 6px 0 rgba(0,0,0,.45);
+  }
+  .footer-qr-card strong{
+    display:block;
+  }
+
+  @media (max-width:820px){
+    .nav-inner{
+      gap:10px !important;
+      padding:10px 14px 12px !important;
+    }
+    .nav-capy{
+      width:min(230px, 68vw) !important;
+      max-width:68vw !important;
+    }
+    .nav-cta{
+      width:min(310px, 100%) !important;
+      min-height:50px !important;
+      padding:10px 16px !important;
+      font-size:16px !important;
+    }
+    .hero-v4{
+      padding:22px 0 36px !important;
+    }
+    .meme-ribbon{
+      padding:10px 14px !important;
+      font-size:clamp(13px, 3.6vw, 16px) !important;
+    }
+    .capy-headline{
+      font-size:clamp(36px, 12.5vw, 58px) !important;
+      line-height:.98 !important;
+      margin:18px 0 14px !important;
+    }
+    .hero-v4-sub{
+      font-size:clamp(15px, 4vw, 18px) !important;
+      line-height:1.38 !important;
+    }
+    .hero-v4-cta .btn-primary{
+      width:min(320px, 100%) !important;
+      min-height:54px !important;
+      padding:12px 16px !important;
+      font-size:16px !important;
+    }
+    .hero-v4-trust{
+      width:min(300px, 100%) !important;
+      gap:10px !important;
+    }
+    .hero-v4-trust span{
+      min-height:46px !important;
+      padding:10px 14px !important;
+      font-size:15px !important;
+      border-width:4px !important;
+    }
+    .capy-visual{
+      min-height:320px !important;
+    }
+    .capy-visual img{
+      width:min(280px, 78vw) !important;
+      max-height:320px !important;
+    }
+    .hero-sticker{
+      max-width:126px !important;
+      font-size:13px !important;
+      padding:8px 10px !important;
+      border-width:4px !important;
+    }
+    .section-title,
+    .compare-title,
+    .final-cta h2,
+    .seo-search-card h2{
+      font-size:clamp(32px, 10vw, 48px) !important;
+      line-height:1 !important;
+    }
+    #como-funciona .section-title,
+    #faq .section-title{
+      font-size:clamp(34px, 10.5vw, 50px) !important;
+    }
+    #provas .section-title{
+      font-size:clamp(29px, 8.6vw, 40px) !important;
+    }
+    .hero-ticker-track{
+      gap:12px !important;
+      padding:10px 14px !important;
+      font-size:clamp(18px, 5vw, 23px) !important;
+    }
+    .hero-ticker-track span{
+      min-height:40px;
+      padding:7px 13px 8px;
+      border-width:4px;
+      border-radius:14px;
+      box-shadow:4px 5px 0 rgba(0,0,0,.62);
+    }
+    .hero-ticker-icon{
+      width:38px !important;
+      height:38px !important;
+    }
+    .footer-logo-img{
+      width:min(220px, 64vw) !important;
+    }
+    .qr-link{
+      width:min(260px, 76vw) !important;
+      border-width:6px;
+    }
+    .qr-capy{
+      width:74px;
+      height:74px;
+      border-width:5px;
+      border-radius:18px;
+      box-shadow:0 0 0 4px #050504, 4px 5px 0 rgba(0,0,0,.42);
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -4026,14 +4232,14 @@
           <span>dentro do zap</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
           <span>Detetive Kapi não dorme</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
           <span>100% grátis</span><img class="hero-ticker-icon" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
-          <span>sem bom dia</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
-          <span>cai preço, toca alerta</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
+          <span>sem enrolação</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
+          <span>caiu o preço, a Kapi avisa</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
           <span>zero spam</span><img class="hero-ticker-icon" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
           <span>dentro do zap</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
           <span>Detetive Kapi não dorme</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
           <span>100% grátis</span><img class="hero-ticker-icon" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
-          <span>sem bom dia</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
-          <span>cai preço, toca alerta</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
+          <span>sem enrolação</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
+          <span>caiu o preço, a Kapi avisa</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
         </div>
       </div>
 
@@ -4478,14 +4684,15 @@
           <a href="privacidade.html">Privacidade</a>
         </nav>
       </div>
-      <div class="footer-qr-card" aria-label="QR Code teste">
-        <div class="qr-test">
-          <img src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
-        </div>
-        <strong>QR Code teste</strong>
+      <div class="footer-qr-card" aria-label="QR Code para abrir a investigação no WhatsApp">
+        <a class="qr-link" href="qr.html?src=footer_qr" data-qr-link aria-label="Abrir WhatsApp da Detetive Kapi pelo QR Code">
+          <img class="qr-image" src="assets/qr-whatsapp.png" width="900" height="900" alt="QR Code para falar com a Detetive Kapi no WhatsApp" loading="eager" decoding="async" />
+          <img class="qr-capy" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
+        </a>
+        <strong>QR Code WhatsApp</strong>
       </div>
       <p class="footer-disclaimer" id="termos">
-        No warranties, representations, or promises (whether implied or express) are made concerning the nature, standard, or accuracy of the information on this website. This disclaimer extends to the suitability of the information for your specific circumstances.
+        Aviso de Isenção de Responsabilidade: A detetive Kapi não faz garantias, representações ou promessas (sejam implícitas ou expressas) em relação à natureza, ao padrão, à disponibilidade de estoque ou à exatidão das informações, preços e promoções veiculados neste site, os quais estão sujeitos a alterações sem aviso prévio. Esta isenção de responsabilidade estende-se à adequação de tais informações para as suas circunstâncias específicas, sendo de responsabilidade exclusiva do usuário verificar a validade das ofertas e a disponibilidade dos produtos diretamente com os lojistas parceiros antes de realizar qualquer transação.
       </p>
     </div>
   </div>
