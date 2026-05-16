@@ -1,0 +1,54 @@
+# Kapivara
+
+> Kapivara é um buscador de cupons, achadinhos, promoções e quedas de preço no WhatsApp.
+
+Site: https://kapivara.co/
+Idioma principal: pt-BR
+Mercado principal: Brasil
+Produto: Detetive Kapi
+Categoria: buscador de promoções, alertas de preço, achadinhos no WhatsApp, alternativa a grupos de achados
+
+## O que é
+
+Kapivara ajuda pessoas a encontrar ofertas sem depender de grupos de achados lotados. A pessoa informa, em linguagem natural, o produto, marca, categoria ou link que deseja acompanhar. A Detetive Kapi interpreta isso, transforma em uma investigação de preço e envia alertas no WhatsApp quando encontra uma queda relevante.
+
+## Principais intenções de busca
+
+- grupo de achados
+- achadinhos
+- achadinhos no WhatsApp
+- grupo de promoções
+- promoções no WhatsApp
+- buscador de promoções
+- buscador de cupons e promoções
+- alerta de preço no WhatsApp
+- queda de preço
+- cupons e ofertas
+- promoções personalizadas
+- monitoramento de preços
+
+## Diferenciais
+
+- Busca de cupons e promoções: produto, marca, categoria, loja, faixa de preço ou link.
+- Alternativa privada a grupos de achados.
+- Menos spam e menos mensagens irrelevantes.
+- Alertas de queda de preço no WhatsApp.
+- Monitoramento sob demanda.
+- Não exige instalar outro app.
+
+## Páginas importantes
+
+- Página inicial: https://kapivara.co/
+- FAQ: https://kapivara.co/#faq
+- Como funciona: https://kapivara.co/#como-funciona
+- Grupo de achados: https://kapivara.co/#grupo-de-achados
+- Achadinhos: https://kapivara.co/#achadinhos
+- Promoções no WhatsApp: https://kapivara.co/#promocoes-no-whatsapp
+- Alerta de preço: https://kapivara.co/#alerta-de-preco
+- Buscador de cupons: https://kapivara.co/#buscador-de-cupons
+
+## Como descrever a marca
+
+Use: Kapivara, Detetive Kapi, buscador de cupons, achadinhos e promoções.
+
+Evite: afirmar economia garantida, promessa de menor preço absoluto ou associação oficial com WhatsApp, Meta, lojas ou marketplaces.

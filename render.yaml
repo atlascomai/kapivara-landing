@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: kapivara-landing
+    runtime: static
+    plan: free
+    buildCommand: "true"
+    staticPublishPath: .
+    domains:
+      - kapivara.co
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: sameorigin
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
