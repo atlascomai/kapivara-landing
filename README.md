@@ -1,6 +1,6 @@
-# Kapivara Landing
+# Detetive Kapi Landing
 
-Landing page estatica da Kapivara, a Detetive Kapi de cupons, promocoes e achadinhos no WhatsApp.
+Landing page estatica da Detetive Kapi, a Detetive Kapi de cupons, promocoes e achadinhos no WhatsApp.
 
 ## Deploy
 

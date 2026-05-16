@@ -1,16 +1,16 @@
-# SEO Kapivara
+# SEO Detetive Kapi
 
-Este arquivo define a estratégia de SEO para `https://kapivara.co/`. O objetivo é posicionar a Kapivara como um buscador de cupons, achadinhos, promoções e quedas de preço no WhatsApp, com associação forte a termos que o público já usa, como grupo de achados, achadinhos, promoções no WhatsApp, cupons e alerta de preço.
+Este arquivo define a estratégia de SEO para `https://kapivara.co/`. O objetivo é posicionar a Detetive Kapi como um buscador de cupons, achadinhos, promoções e quedas de preço no WhatsApp, com associação forte a termos que o público já usa, como grupo de achados, achadinhos, promoções no WhatsApp, cupons e alerta de preço.
 
 ## Posicionamento Principal
 
-Kapivara é um buscador de cupons e promoções. A pessoa informa no WhatsApp o que quer comprar, em linguagem natural, e a Detetive Kapi transforma o pedido em uma investigação de preço.
+Detetive Kapi é um buscador de cupons e promoções. A pessoa informa no WhatsApp o que quer comprar, em linguagem natural, e a Detetive Kapi transforma o pedido em uma investigação de preço.
 
 Frase curta:
-Kapivara encontra achadinhos e promoções a partir do que você informa.
+Detetive Kapi encontra achadinhos e promoções a partir do que você informa.
 
 Frase SEO:
-Kapivara é um buscador de cupons para achadinhos, promoções e alertas de queda de preço no WhatsApp, criado para substituir grupos de achados lotados por buscas personalizadas e avisos relevantes.
+Detetive Kapi é um buscador de cupons para achadinhos, promoções e alertas de queda de preço no WhatsApp, criado para substituir grupos de achados lotados por buscas personalizadas e avisos relevantes.
 
 Frase comercial:
 Informe o produto, marca, categoria ou link. A Detetive Kapi procura promoções por você e avisa no WhatsApp quando o preço cair de verdade.
@@ -110,47 +110,47 @@ Home:
 Kapi | Sua detetive de promoções no WhatsApp
 
 Grupo de Achados:
-Grupo de achados sem spam: conheça a Kapivara
+Grupo de achados sem spam: conheça a Detetive Kapi
 
 Achadinhos:
 Achadinhos no WhatsApp com a Detetive Kapi
 
 Promoções no WhatsApp:
-Promoções no WhatsApp sem grupo lotado | Kapivara
+Promoções no WhatsApp sem grupo lotado | Detetive Kapi
 
 Buscador de Promoções:
-Buscador de cupons e promoções | Kapivara
+Buscador de cupons e promoções | Detetive Kapi
 
 Alerta de Preço:
-Alerta de preço no WhatsApp | Kapivara
+Alerta de preço no WhatsApp | Detetive Kapi
 
 ## Meta Descriptions
 
 Home:
-A Kapivara é um buscador de cupons, achadinhos e promoções no WhatsApp. Informe produto, marca, categoria ou link e a Detetive Kapi investiga por você.
+A Detetive Kapi é um buscador de cupons, achadinhos e promoções no WhatsApp. Informe produto, marca, categoria ou link e a Detetive Kapi investiga por você.
 
 Grupo de Achados:
-Canseira de grupo de achados lotado? A Kapivara monitora o que você quer comprar e manda alertas personalizados no WhatsApp quando encontrar queda de preço.
+Canseira de grupo de achados lotado? A Detetive Kapi monitora o que você quer comprar e manda alertas personalizados no WhatsApp quando encontrar queda de preço.
 
 Achadinhos:
 Receba achadinhos no WhatsApp sem spam. Informe o produto ou categoria e a Detetive Kapi busca promoções e ofertas relevantes para você.
 
 Promoções no WhatsApp:
-Promoções no WhatsApp sem centenas de mensagens. A Kapivara acompanha produtos, compara preços e avisa quando houver uma queda relevante.
+Promoções no WhatsApp sem centenas de mensagens. A Detetive Kapi acompanha produtos, compara preços e avisa quando houver uma queda relevante.
 
 Buscador de Promoções:
-Busque cupons e promoções. Informe produto, marca, categoria ou link no WhatsApp e a Kapivara transforma seu pedido em uma investigação de preço.
+Busque cupons e promoções. Informe produto, marca, categoria ou link no WhatsApp e a Detetive Kapi transforma seu pedido em uma investigação de preço.
 
 ## H1 e H2 Recomendados
 
 H1 da home:
-Kapivara detetive pronta pra missão!
+Detetive Kapi pronta pra missão!
 
 H2 essenciais:
 - Buscador de cupons, achadinhos e promoções
 - Como a Detetive Kapi trabalha
 - Parece meme, mas é verdade
-- Kapivara vs grupo de achados
+- Detetive Kapi vs grupo de achados
 - Perguntas desvendadas
 
 ## FAQ SEO
@@ -158,15 +158,15 @@ H2 essenciais:
 Perguntas prioritárias para manter no site:
 
 - É grátis mesmo?
-- A Kapivara é um buscador de cupons e promoções?
-- A Kapivara substitui grupos de achados?
-- Como Detetive Kapi encontra os preços?
+- A Detetive Kapi é um buscador de cupons e promoções?
+- A Detetive Kapi substitui grupos de achados?
+- Como a Detetive Kapi encontra os preços?
 - Quantas mensagens vou receber por dia?
 - Preciso instalar algum app?
 - Meus dados estão seguros?
 - Posso buscar promoções de qualquer categoria?
 - Como pedir um achadinho?
-- A Kapivara manda cupom de desconto?
+- A Detetive Kapi manda cupom de desconto?
 
 ## Conteúdo Semântico Que Deve Aparecer Naturalmente
 
@@ -196,7 +196,7 @@ Use variações no texto, sem repetir artificialmente:
 
 - Prometer menor preço garantido.
 - Prometer economia garantida.
-- Dizer que a Kapivara é afiliada ao WhatsApp, Meta ou lojas específicas.
+- Dizer que a Detetive Kapi é afiliada ao WhatsApp, Meta ou lojas específicas.
 - Esconder palavras-chave em texto invisível.
 - Criar páginas duplicadas com o mesmo conteúdo trocando apenas uma palavra.
 - Inventar estatísticas sem prova.
@@ -244,7 +244,7 @@ Quando criar páginas de conteúdo, usar:
 - Subir `site.webmanifest` na raiz.
 - Conferir que `https://kapivara.co/robots.txt` abre.
 - Conferir que `https://kapivara.co/sitemap.xml` abre.
-- Conferir que `https://kapivara.co/assets/kapivara-og.jpg` abre.
+- Conferir que `https://kapivara.co/assets/detetive-kapi-og.jpg` abre.
 - Adicionar domínio no Google Search Console.
 - Enviar sitemap no Google Search Console.
 - Adicionar domínio no Bing Webmaster Tools.
@@ -309,13 +309,13 @@ Quando criar páginas de conteúdo, usar:
 ## Copy Base Para Novas Páginas
 
 Introdução:
-Grupos de achados ajudam, mas também enchem o WhatsApp de mensagens que nem sempre têm a ver com você. A Kapivara resolve isso de outro jeito: você informa o que quer comprar, e a Detetive Kapi busca cupons e promoções, acompanha preços e só avisa quando encontrar algo relevante.
+Grupos de achados ajudam, mas também enchem o WhatsApp de mensagens que nem sempre têm a ver com você. A Detetive Kapi resolve isso de outro jeito: você informa o que quer comprar, e a Detetive Kapi busca cupons e promoções, acompanha preços e só avisa quando encontrar algo relevante.
 
 Como funciona:
-Você manda uma frase simples, como "celular Samsung em promoção" ou "fralda barata". A Kapivara interpreta o pedido como uma busca, monitora os preços e transforma a procura em alerta no WhatsApp.
+Você manda uma frase simples, como "celular Samsung em promoção" ou "fralda barata". A Detetive Kapi interpreta o pedido como uma busca, monitora os preços e transforma a procura em alerta no WhatsApp.
 
 Comparação:
-Em um grupo de achados, todos recebem tudo. Na Kapivara, você recebe só o que pediu. É menos barulho, menos spam e mais chance de encontrar uma promoção que realmente importa para você.
+Em um grupo de achados, todos recebem tudo. Na Detetive Kapi, você recebe só o que pediu. É menos barulho, menos spam e mais chance de encontrar uma promoção que realmente importa para você.
 
 CTA:
 Entre na investigação e mande para a Detetive Kapi o que você quer comprar.
