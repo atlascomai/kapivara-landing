@@ -47,8 +47,8 @@
       "logo": {
         "@type": "ImageObject",
         "url": "https://kapivara.co/assets/kapi-logo-B.png",
-        "width": 1077,
-        "height": 670
+        "width": 1581,
+        "height": 968
       },
       "sameAs": [
         "https://www.instagram.com/kapivara.co/",
@@ -201,10 +201,13 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Anton&family=Bebas+Neue&family=Oswald:wght@600;700&family=Abril+Fatface&family=Archivo+Black&family=IM+Fell+English+SC&family=Rozha+One&family=Permanent+Marker&family=Caveat:wght@600;700&family=Special+Elite&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Special+Elite&display=swap" rel="stylesheet">
 
 <style>
   :root{
+    --title-font:'Bagel Fat One', Arial, sans-serif;
+    --mono-font:'Special Elite', 'Courier New', monospace;
+    --body-font:Arial, sans-serif;
     --paper:#efe7d6;
     --paper-2:#e6dcc6;
     --paper-3:#d9ccb0;
@@ -222,7 +225,7 @@
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
   body{
-    font-family:'Inter',system-ui,sans-serif;
+    font-family:var(--body-font);
     color:var(--ink);
     background:var(--paper);
     -webkit-font-smoothing:antialiased;
@@ -253,7 +256,7 @@
     background:#fff15d;
     color:#050504;
     box-shadow:5px 6px 0 rgba(0,0,0,.55);
-    font-family:'Special Elite', monospace;
+    font-family:var(--mono-font);
     font-weight:900;
     text-decoration:none;
     text-transform:uppercase;
@@ -345,12 +348,12 @@
     width:38px; height:38px; border-radius:50%;
     background:var(--ink); color:var(--paper);
     display:grid; place-items:center;
-    font-family:'Playfair Display',serif; font-weight:900;
+    font-family:var(--title-font); font-weight:900;
     font-size:20px;
     box-shadow: 0 2px 0 rgba(0,0,0,0.15);
   }
-  .brand-name{font-family:'Playfair Display',serif; font-weight:900; font-size:24px; letter-spacing:-.5px; line-height:1;}
-  .brand-tag{font-family:'Special Elite',monospace; font-size:10px; letter-spacing:1.5px; color:var(--muted); text-transform:uppercase; margin-top:2px;}
+  .brand-name{font-family:var(--title-font); font-weight:900; font-size:24px; letter-spacing:-.5px; line-height:1;}
+  .brand-tag{font-family:var(--mono-font); font-size:10px; letter-spacing:1.5px; color:var(--muted); text-transform:uppercase; margin-top:2px;}
   .nav-cta{
     display:inline-flex; align-items:center; gap:8px;
     background:var(--green); color:#fff;
@@ -454,18 +457,18 @@
   }
 
   /* fonts */
-  .f-serif{font-family:'Playfair Display', serif; font-weight:900;}
-  .f-serif-i{font-family:'Playfair Display', serif; font-weight:900; font-style:italic;}
-  .f-condensed{font-family:'Anton', sans-serif;}
-  .f-bebas{font-family:'Bebas Neue', sans-serif;}
-  .f-oswald{font-family:'Oswald', sans-serif; font-weight:700;}
-  .f-slab{font-family:'Abril Fatface', serif;}
-  .f-roman{font-family:'Rozha One', serif;}
-  .f-archivo{font-family:'Archivo Black', sans-serif;}
-  .f-news{font-family:'IM Fell English SC', serif;}
-  .f-marker{font-family:'Permanent Marker', cursive;}
-  .f-script{font-family:'Caveat', cursive; font-weight:700;}
-  .f-mono{font-family:'Special Elite', monospace;}
+  .f-serif{font-family:var(--title-font); font-weight:900;}
+  .f-serif-i{font-family:var(--title-font); font-weight:900; font-style:italic;}
+  .f-condensed{font-family:var(--title-font);}
+  .f-bebas{font-family:var(--title-font);}
+  .f-oswald{font-family:var(--title-font); font-weight:700;}
+  .f-slab{font-family:var(--title-font);}
+  .f-roman{font-family:var(--title-font);}
+  .f-archivo{font-family:var(--title-font);}
+  .f-news{font-family:var(--title-font);}
+  .f-marker{font-family:var(--title-font);}
+  .f-script{font-family:var(--title-font); font-weight:700;}
+  .f-mono{font-family:var(--mono-font);}
 
   /* HEADLINE chunks — each its own sticker */
   .chunk{
@@ -490,7 +493,7 @@
     color:var(--red);
     border:3px double var(--red);
     padding:6px 14px;
-    font-family:'Archivo Black', sans-serif;
+    font-family:var(--title-font);
     text-transform:uppercase;
     letter-spacing:2px;
     font-size:14px;
@@ -544,7 +547,7 @@
   }
   .chat-card .head .av{
     width:24px; height:24px; border-radius:50%; background:var(--green); display:grid; place-items:center; color:#f6efde; font-weight:900; font-size:11px;
-    font-family:'Playfair Display', serif;
+    font-family:var(--title-font);
   }
   .chat-card .body{padding:10px 4px; display:flex; flex-direction:column; gap:6px;}
   .msg{
@@ -562,7 +565,7 @@
     position:absolute;
     background:#f6efde;
     padding:8px 22px 8px 14px;
-    font-family:'Archivo Black', sans-serif;
+    font-family:var(--title-font);
     font-size:14px;
     box-shadow: 0 8px 18px rgba(0,0,0,.18);
     clip-path: polygon(0 0, 88% 0, 100% 50%, 88% 100%, 0 100%);
@@ -572,7 +575,7 @@
     content:""; position:absolute; left:6px; top:50%; transform:translateY(-50%);
     width:8px; height:8px; border-radius:50%; background:#f6efde; border:2px solid #1a1714;
   }
-  .price-tag span{display:block; font-family:'Special Elite', monospace; font-size:9px; color:var(--muted); letter-spacing:1px;}
+  .price-tag span{display:block; font-family:var(--mono-font); font-size:9px; color:var(--muted); letter-spacing:1px;}
 
   /* postage stamp */
   .postage{
@@ -591,7 +594,7 @@
     border:1px solid var(--red);
     display:grid; place-items:center;
     color:var(--red);
-    font-family:'IM Fell English SC', serif;
+    font-family:var(--title-font);
     font-size:11px; text-align:center; line-height:1.15;
     padding:8px;
   }
@@ -614,7 +617,7 @@
     text-align:center;
   }
   .reveal-script{
-    font-family:'Caveat', cursive; font-weight:700;
+    font-family:var(--title-font); font-weight:700;
     font-size:clamp(30px, 4.5vw, 60px);
     color:#1a1714;
     display:inline-block;
@@ -623,7 +626,7 @@
     transition: transform .9s cubic-bezier(.2,.8,.2,1), opacity .8s ease;
   }
   .reveal-hl{
-    font-family:'Playfair Display', serif; font-style:italic; font-weight:900;
+    font-family:var(--title-font); font-style:italic; font-weight:900;
     font-size:clamp(36px, 6vw, 84px);
     color:#1a1714;
     background: linear-gradient(180deg, transparent 38%, var(--yellow) 38%, var(--yellow) 92%, transparent 92%);
@@ -656,7 +659,7 @@
     box-shadow:0 4px 0 var(--green-deep), 0 12px 30px rgba(30,107,58,.32);
     transition: transform .12s, box-shadow .12s;
     border:none; cursor:pointer;
-    font-family:'Inter',sans-serif;
+    font-family:var(--body-font);
   }
   .btn-primary:hover{transform:translateY(-2px); box-shadow:0 6px 0 var(--green-deep), 0 16px 36px rgba(30,107,58,.4);}
   .btn-primary:active{transform:translateY(2px); box-shadow:0 2px 0 var(--green-deep);}
@@ -679,7 +682,7 @@
   .section{padding:60px 0; position:relative;}
   .section-tag{
     display:inline-block;
-    font-family:'Special Elite',monospace;
+    font-family:var(--mono-font);
     font-size:12px; letter-spacing:2px;
     text-transform:uppercase;
     color:var(--muted);
@@ -687,7 +690,7 @@
     margin-bottom:14px;
   }
   .section-title{
-    font-family:'Playfair Display',serif;
+    font-family:var(--title-font);
     font-weight:900; font-size:clamp(32px,4.2vw,52px);
     line-height:1.02; letter-spacing:-1px;
     margin:0 0 12px;
@@ -757,7 +760,7 @@
     max-width:min(82%, 410px);
     padding:14px 18px;
     border-radius:20px;
-    font-family:'Inter', system-ui, sans-serif;
+    font-family:var(--body-font);
     font-size:16px;
     line-height:1.42;
     color:#f6efde;
@@ -885,7 +888,7 @@
   .stat + .stat{border-left:1px dashed rgba(255,255,255,.12); padding-left:20px;}
   @media (max-width:980px){ .stat + .stat{border-left:0; padding-left:0;} }
   .stat-num{
-    font-family:'Playfair Display',serif; font-weight:900;
+    font-family:var(--title-font); font-weight:900;
     font-size:clamp(44px, 5vw, 76px);
     line-height:.9; letter-spacing:-2px;
     display:flex; align-items:baseline; justify-content:center; gap:.05em;
@@ -924,7 +927,7 @@
   }
   .stat-label{
     font-size:13px; color:#bfb59e; margin-top:12px; line-height:1.4;
-    font-family:'Special Elite', monospace; letter-spacing:.5px;
+    font-family:var(--mono-font); letter-spacing:.5px;
     text-transform:uppercase;
     max-width:190px;
   }
@@ -940,14 +943,14 @@
   }
   .compare-title{
     display:flex; justify-content:center; align-items:center; gap:18px; flex-wrap:wrap;
-    font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(28px,3.5vw,42px);
+    font-family:var(--title-font); font-weight:900; font-size:clamp(28px,3.5vw,42px);
     margin:0 0 30px;
   }
   .compare-title .vs{
     width:42px; height:42px; border-radius:50%;
     background:var(--ink); color:#f6efde;
     display:grid; place-items:center;
-    font-size:14px; font-family:'Inter',sans-serif; font-weight:700;
+    font-size:14px; font-family:var(--body-font); font-weight:700;
   }
   .compare-title .capi{color:var(--green);}
   .compare-table{display:grid; grid-template-columns: 1.1fr 1fr 1fr; gap:0; border-top:1px solid var(--line);}
@@ -1079,7 +1082,7 @@
   }
   @media (max-width:820px){ .final-cta{grid-template-columns:1fr; padding:34px 26px;} }
   .final-cta h2{
-    font-family:'Playfair Display',serif; font-weight:900;
+    font-family:var(--title-font); font-weight:900;
     font-size:clamp(28px,3.6vw,44px); line-height:1.04; letter-spacing:-1px;
     margin:0 0 10px;
   }
@@ -1156,7 +1159,7 @@
     background:var(--ink); color:#f6efde;
     overflow:hidden; white-space:nowrap;
     padding:24px 0;
-    font-family:'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:clamp(28px, 3.4vw, 44px);
     letter-spacing:1px;
     text-transform:uppercase;
@@ -1172,7 +1175,7 @@
   .marquee-track{display:inline-flex; gap:64px; animation: scroll 36s linear infinite;}
   .marquee-track span{display:inline-flex; align-items:center; gap:18px;}
   .marquee-track .dot{width:10px; height:10px; border-radius:50%; background:var(--green-bright); flex-shrink:0;}
-  .marquee-track em{font-style:normal; color:var(--yellow); font-family:'Playfair Display', serif; font-weight:900;}
+  .marquee-track em{font-style:normal; color:var(--yellow); font-family:var(--title-font); font-weight:900;}
   @keyframes scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
 
   /* ============== CASE FILES — typewriter override below hero ============== */
@@ -1184,7 +1187,7 @@
   .final-cta, .final-cta *,
   .footer, .footer *,
   .float-cta, .float-cta *{
-    font-family: 'Special Elite', 'Courier New', monospace !important;
+    font-family:var(--mono-font) !important;
   }
   /* O letter-spacing apertado do design original quebra a Special Elite —
      relaxa só nos títulos pra respirar como máquina de escrever. */
@@ -1540,7 +1543,7 @@
     display:inline-block;
     background:#f3ead4;
     padding:14px 32px 18px;
-    font-family:'Playfair Display', serif;
+    font-family:var(--title-font);
     font-weight:900;
     color:#1a1714;
     line-height:1;
@@ -1643,7 +1646,7 @@
   .hero-v4-sub{
     margin: 38px auto 0;
     max-width: 540px;
-    font-family:'Special Elite', 'Courier New', monospace;
+    font-family:var(--mono-font);
     font-size: 16px;
     line-height: 1.6;
     color: var(--ink-soft);
@@ -1658,7 +1661,7 @@
     color:#050504 !important;
     padding: 18px 30px !important;
     border-radius: 12px !important;
-    font-family:'Special Elite', 'Courier New', monospace !important;
+    font-family:var(--mono-font) !important;
     font-size: 15px !important;
     letter-spacing: .4px;
     font-weight: 800;
@@ -1680,7 +1683,7 @@
     color: #fff !important;
   }
   .btn-investigate [data-cta-copy]{
-    font-family:'Special Elite', 'Courier New', monospace !important;
+    font-family:var(--mono-font) !important;
   }
   @media (max-width:760px){
     .btn-investigate{ min-width:0; width:100%; }
@@ -1689,7 +1692,7 @@
   .hero-v4-trust{
     margin: 22px auto 0;
     display:inline-flex; align-items:center; gap:8px;
-    font-family:'Inter', sans-serif;
+    font-family:var(--body-font);
     font-size: 13px;
     color: var(--muted);
   }
@@ -1738,7 +1741,7 @@
     margin-bottom:2px;
   }
   .spam-name{
-    font-family:'Inter', sans-serif;
+    font-family:var(--body-font);
     font-weight:700;
     font-size:13px;
     color: var(--ink);
@@ -1746,13 +1749,13 @@
     overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
   }
   .spam-time{
-    font-family:'Special Elite', monospace;
+    font-family:var(--mono-font);
     font-size:10px;
     color: var(--muted);
     flex-shrink:0;
   }
   .spam-msg{
-    font-family:'Inter', sans-serif;
+    font-family:var(--body-font);
     font-size:11px;
     color: var(--muted);
     line-height:1.3;
@@ -1764,7 +1767,7 @@
     background: var(--green);
     color:#fff;
     border-radius:999px;
-    font-family:'Inter', sans-serif;
+    font-family:var(--body-font);
     font-weight:800;
     font-size:9.5px;
     padding:3px 7px;
@@ -1835,21 +1838,21 @@
   }
   .nav-title{display:flex; flex-direction:column; line-height:.95;}
   .nav-title strong{
-    font-family:'Anton', 'Arial Black', sans-serif;
+    font-family:var(--title-font);
     font-size:28px; text-transform:uppercase; letter-spacing:.5px; color:#fff;
   }
   .nav-title small{
-    margin-top:4px; font-family:'Special Elite', monospace;
+    margin-top:4px; font-family:var(--mono-font);
     color:var(--capy-green); font-size:12px; text-transform:uppercase;
   }
   .nav-links{display:flex; align-items:center; justify-content:center; gap:28px; margin:0 auto;}
-  .nav-links a{color:var(--capy-paper); text-decoration:none; font-family:'Special Elite', monospace; font-size:13px;}
+  .nav-links a{color:var(--capy-paper); text-decoration:none; font-family:var(--mono-font); font-size:13px;}
   .nav-links a:hover{color:var(--capy-green);}
   .nav-cta, .btn-primary, .btn-investigate, .float-cta a{
     background:linear-gradient(180deg, #7bd600, #2f9800) !important;
     color:#fff !important; border-radius:10px !important;
     box-shadow:0 5px 0 #185f00, 0 16px 34px rgba(71,195,0,.28) !important;
-    font-family:'Anton', 'Arial Black', sans-serif !important;
+    font-family:var(--title-font) !important;
     letter-spacing:.6px !important; text-transform:uppercase !important;
   }
   .nav-cta{padding:14px 24px;}
@@ -1876,12 +1879,12 @@
   .meme-ribbon{
     display:inline-block; background:var(--capy-green); color:#0a1604;
     padding:8px 14px; transform:rotate(-3deg);
-    font-family:'Special Elite', monospace; font-weight:900; text-transform:uppercase;
+    font-family:var(--mono-font); font-weight:900; text-transform:uppercase;
     box-shadow:0 4px 0 rgba(0,0,0,.18);
   }
   .capy-headline{
     margin:22px 0 0;
-    font-family:'Anton', 'Arial Black', sans-serif;
+    font-family:var(--title-font);
     font-size:clamp(46px, 8.4vw, 106px);
     line-height:.88; letter-spacing:.5px; text-transform:uppercase;
     color:#11100d; max-width:760px;
@@ -1889,13 +1892,13 @@
   .capy-headline span{display:inline-block; color:#2d8100; text-shadow:2px 2px 0 rgba(0,0,0,.12);}
   .hero-v4-sub{
     margin:24px 0 0; max-width:640px; color:#171513;
-    font-size:18px; line-height:1.55; font-family:'Special Elite', monospace !important;
+    font-size:18px; line-height:1.55; font-family:var(--mono-font) !important;
   }
   .hero-v4-cta{align-items:flex-start; margin:26px 0 0;}
   .btn-investigate{min-width:0; padding:18px 26px !important; font-size:18px !important;}
   .hero-v4-trust{
     margin-top:18px; display:flex; gap:18px; flex-wrap:wrap;
-    color:#2a251b; font-family:'Special Elite', monospace; font-weight:700;
+    color:#2a251b; font-family:var(--mono-font); font-weight:700;
   }
   .capy-visual{position:relative; min-height:520px; display:grid; place-items:center;}
   .capy-visual img{
@@ -1906,19 +1909,19 @@
   .mission-note, .price-note{
     position:absolute; background:#f4ead1; color:#11100d;
     border:1px solid rgba(0,0,0,.12); box-shadow:0 14px 28px -18px rgba(0,0,0,.45);
-    font-family:'Special Elite', monospace; text-transform:uppercase;
+    font-family:var(--mono-font); text-transform:uppercase;
   }
   .mission-note{right:0; top:34px; width:205px; padding:18px; transform:rotate(3deg); font-size:18px; line-height:1.25;}
-  .mission-note strong{display:block; font-family:'Anton', sans-serif; font-size:26px;}
+  .mission-note strong{display:block; font-family:var(--title-font); font-size:26px;}
   .price-note{left:8px; bottom:80px; padding:14px 18px; transform:rotate(-4deg); font-size:15px;}
-  .price-note b{display:inline-block; background:var(--capy-red); color:#fff; padding:6px 8px; margin-bottom:8px; font-family:'Anton', sans-serif; font-size:18px;}
-  .price-note span{color:#2f9800; font-family:'Anton', sans-serif; font-size:28px;}
+  .price-note b{display:inline-block; background:var(--capy-red); color:#fff; padding:6px 8px; margin-bottom:8px; font-family:var(--title-font); font-size:18px;}
+  .price-note span{color:#2f9800; font-family:var(--title-font); font-size:28px;}
   .hero-v4-notifs{grid-column:1 / -1; width:100%; margin-top:4px;}
   .spam-notif{background:#080706; color:var(--capy-paper); border-color:rgba(241,234,216,.1);}
   .product-demo, .section, .footer{background:#050504; color:var(--capy-paper);}
   .product-demo{padding-top:78px;}
   .section-title, .compare-title, .final-cta h2{
-    font-family:'Anton', 'Arial Black', sans-serif !important;
+    font-family:var(--title-font) !important;
     text-transform:uppercase; color:var(--capy-paper) !important; line-height:.95;
   }
   .section-title .accent, .compare-title .capi, .final-cta p .accent{color:var(--capy-green) !important;}
@@ -1957,8 +1960,8 @@
     border:1px solid rgba(114,201,0,.3);
   }
   .footer-logo{display:none;}
-  .footer .brand::before{content:"KAPI"; font-family:'Anton', sans-serif; color:var(--capy-green); font-size:20px;}
-  .footer .brand::after{content:"DETETIVE KAPI DE PROMOÇÕES"; font-family:'Special Elite', monospace; color:#b8aa8e; font-size:10px; margin-left:8px;}
+  .footer .brand::before{content:"KAPI"; font-family:var(--title-font); color:var(--capy-green); font-size:20px;}
+  .footer .brand::after{content:"DETETIVE KAPI DE PROMOÇÕES"; font-family:var(--mono-font); color:#b8aa8e; font-size:10px; margin-left:8px;}
   @media (max-width:900px){
     .nav-links{display:none;}
     .hero-v4-grid{grid-template-columns:1fr;}
@@ -2061,7 +2064,7 @@
     border:0 !important;
     border-radius:9px;
     padding:12px 22px;
-    font-family:'Special Elite', monospace !important;
+    font-family:var(--mono-font) !important;
     font-size:18px;
     letter-spacing:5px;
     box-shadow:0 8px 18px rgba(0,0,0,.35);
@@ -2070,7 +2073,7 @@
   #como-funciona .section-tag::after{content:"★"; letter-spacing:0;}
   #como-funciona .section-title{
     margin-top:24px;
-    font-family:'Archivo Black', 'Anton', sans-serif !important;
+    font-family:var(--title-font) !important;
     font-size:clamp(50px, 8vw, 112px);
     letter-spacing:0 !important;
     line-height:.9;
@@ -2082,11 +2085,11 @@
     color:#59c463 !important;
     display:inline-block;
     transform:rotate(-1deg);
-    font-family:'Archivo Black', 'Anton', sans-serif !important;
+    font-family:var(--title-font) !important;
   }
   #como-funciona .section-sub{
     margin-top:28px;
-    font-family:'Inter', system-ui, sans-serif !important;
+    font-family:var(--body-font) !important;
     color:#d8cfbe !important;
     font-size:24px;
     line-height:1.35;
@@ -2130,7 +2133,7 @@
     border-radius:50%;
     background:#050504;
     color:#fff15d;
-    font-family:'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:52px;
     font-style:italic;
     box-shadow:0 5px 0 rgba(0,0,0,.32);
@@ -2153,7 +2156,7 @@
   }
   #como-funciona .step h3{
     margin:0 0 20px;
-    font-family:'Archivo Black', 'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:clamp(24px, 2.4vw, 36px);
     line-height:.92;
     text-transform:uppercase;
@@ -2163,7 +2166,7 @@
   }
   #como-funciona .step p{
     margin:0;
-    font-family:'Inter', system-ui, sans-serif !important;
+    font-family:var(--body-font) !important;
     color:#302c25;
     font-size:18px;
     line-height:1.45;
@@ -2177,7 +2180,7 @@
     border-radius:999px;
     background:#ec4aa0;
     color:#fff;
-    font-family:'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:18px;
     text-transform:uppercase;
     transform:rotate(-4deg);
@@ -2226,7 +2229,7 @@
     border:0 !important;
     border-radius:9px;
     padding:12px 22px;
-    font-family:'Special Elite', monospace !important;
+    font-family:var(--mono-font) !important;
     font-size:16px;
     letter-spacing:4px;
     text-transform:uppercase;
@@ -2237,7 +2240,7 @@
   .section-title,
   .compare-title,
   .final-cta h2{
-    font-family:'Archivo Black', 'Anton', sans-serif !important;
+    font-family:var(--title-font) !important;
     font-size:clamp(46px, 7vw, 106px) !important;
     line-height:.9 !important;
     letter-spacing:0 !important;
@@ -2246,14 +2249,14 @@
   }
   .section-title .accent,
   .compare-title .capi{
-    font-family:'Archivo Black', 'Anton', sans-serif !important;
+    font-family:var(--title-font) !important;
     color:#59c463 !important;
   }
   .section-sub{
     max-width:760px;
     margin:24px auto 0;
     color:#d8cfbe !important;
-    font-family:'Inter', system-ui, sans-serif !important;
+    font-family:var(--body-font) !important;
     font-size:22px;
     line-height:1.35;
     text-align:center;
@@ -2288,7 +2291,7 @@
   .bubble{
     border:4px solid #050504;
     box-shadow:4px 5px 0 rgba(0,0,0,.16);
-    font-family:'Inter', system-ui, sans-serif !important;
+    font-family:var(--body-font) !important;
   }
   .bubble.bot{background:#fff; color:#11100d;}
   .bubble.user{background:#58c263; color:#11100d;}
@@ -2297,7 +2300,7 @@
     background:#050504;
     color:#fff15d;
     box-shadow:none;
-    font-family:'Special Elite', monospace !important;
+    font-family:var(--mono-font) !important;
   }
   .bubble.alert{
     background:#fff15d !important;
@@ -2334,7 +2337,7 @@
   }
   .benefit-card h3{
     margin-top:28px;
-    font-family:'Archivo Black', 'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:clamp(24px, 2.2vw, 34px);
     line-height:.95;
     color:#050504 !important;
@@ -2342,7 +2345,7 @@
   }
   .benefit-card p{
     color:#302c25 !important;
-    font-family:'Inter', system-ui, sans-serif !important;
+    font-family:var(--body-font) !important;
     font-size:17px;
   }
   .stats{
@@ -2356,14 +2359,14 @@
     border-color:rgba(255,241,93,.22) !important;
   }
   .stat-num{
-    font-family:'Archivo Black', 'Anton', sans-serif !important;
+    font-family:var(--title-font) !important;
     color:#fff15d !important;
     text-shadow:none;
   }
   .stat-num .accent{color:#72c900 !important;}
   .stat-label{
     color:#f5eddc !important;
-    font-family:'Special Elite', monospace !important;
+    font-family:var(--mono-font) !important;
   }
 
   .testi-wrap{
@@ -2381,12 +2384,12 @@
   .testi:nth-child(3){--tilt:-.5deg; background:#58c263 !important;}
   .testi p{
     color:#11100d !important;
-    font-family:'Inter', system-ui, sans-serif !important;
+    font-family:var(--body-font) !important;
     font-size:18px;
   }
   .stars{
     color:#ec4aa0;
-    font-family:'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:20px;
   }
   .who strong,
@@ -2424,7 +2427,7 @@
     border-radius:999px;
     background:#ec4aa0;
     color:#fff;
-    font-family:'Special Elite', monospace;
+    font-family:var(--mono-font);
     font-size:20px;
     font-weight:900;
     letter-spacing:2px;
@@ -2462,7 +2465,7 @@
     height:auto;
     background:transparent;
     color:#f5eddc;
-    font-family:'Archivo Black', sans-serif;
+    font-family:var(--title-font);
     font-size:inherit;
   }
   .compare-section-head .section-sub{
@@ -2475,11 +2478,11 @@
   .compare-table > div{
     padding:20px 18px;
     border-bottom:4px solid #050504 !important;
-    font-family:'Inter', system-ui, sans-serif;
+    font-family:var(--body-font);
     font-size:17px;
   }
   .compare-head{
-    font-family:'Archivo Black', sans-serif !important;
+    font-family:var(--title-font) !important;
     font-size:22px !important;
     text-transform:uppercase;
     color:#050504 !important;
@@ -2488,7 +2491,7 @@
   .compare-head.groups{background:rgba(236,74,160,.12) !important;}
   .compare-label{
     color:#050504 !important;
-    font-family:'Archivo Black', sans-serif !important;
+    font-family:var(--title-font) !important;
     text-transform:uppercase;
   }
   .compare-val{
@@ -2527,7 +2530,7 @@
     min-height:88px;
     padding:26px 86px 24px 30px;
     color:#050504 !important;
-    font-family:'Archivo Black', 'Anton', sans-serif !important;
+    font-family:var(--title-font) !important;
     font-size:clamp(20px, 2vw, 32px);
     text-transform:uppercase;
     letter-spacing:0;
@@ -2545,7 +2548,7 @@
     border-radius:50%;
     background:#050504;
     color:#fff15d !important;
-    font-family:'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:34px;
   }
   .faq details[open] summary::after{
@@ -2555,7 +2558,7 @@
     padding:0 30px 30px;
     margin:0;
     color:#302c25 !important;
-    font-family:'Inter', system-ui, sans-serif !important;
+    font-family:var(--body-font) !important;
     font-size:20px;
     line-height:1.6;
   }
@@ -2577,7 +2580,7 @@
   }
   .final-cta p{
     color:#d8cfbe !important;
-    font-family:'Inter', system-ui, sans-serif !important;
+    font-family:var(--body-font) !important;
     font-size:20px;
   }
   .cta-proof{
@@ -2592,7 +2595,7 @@
   .cta-proof-icon{
     background:#050504 !important;
     color:#fff15d !important;
-    font-family:'Anton', sans-serif;
+    font-family:var(--title-font);
   }
   .footer{
     border-top:7px solid #050504 !important;
@@ -2645,7 +2648,7 @@
     box-shadow:5px 6px 0 rgba(0,0,0,.75);
   }
   .nav-title strong{
-    font-family:'Archivo Black', 'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:28px;
     color:#f5eddc;
     text-shadow:3px 3px 0 rgba(0,0,0,.72);
@@ -2705,7 +2708,7 @@
   .capy-headline{
     max-width:650px;
     margin:26px 0 0;
-    font-family:'Archivo Black', 'Anton', sans-serif !important;
+    font-family:var(--title-font) !important;
     font-size:clamp(54px, 6.4vw, 104px);
     line-height:.88;
     letter-spacing:0;
@@ -2720,7 +2723,7 @@
     max-width:610px;
     margin:28px 0 0;
     color:#d8cfbe !important;
-    font-family:'Inter', system-ui, sans-serif !important;
+    font-family:var(--body-font) !important;
     font-size:22px;
     line-height:1.35;
   }
@@ -2746,7 +2749,7 @@
     background:#f7f5ef;
     color:#11100d;
     box-shadow:6px 7px 0 rgba(0,0,0,.55);
-    font-family:'Special Elite', monospace;
+    font-family:var(--mono-font);
     font-size:18px;
     font-weight:900;
     transform:rotate(var(--tilt, -1deg));
@@ -2774,7 +2777,7 @@
     border-radius:0;
     background:#ec4aa0;
     color:#fff;
-    font-family:'Archivo Black', 'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:21px;
     font-weight:900;
     letter-spacing:0;
@@ -2816,7 +2819,7 @@
     background:transparent;
     box-shadow:none;
     color:#fff15d;
-    font-family:'Caveat', cursive;
+    font-family:var(--title-font);
     font-size:30px;
     line-height:1;
     text-transform:none;
@@ -2836,7 +2839,7 @@
     background:#f7f5ef;
     color:#11100d;
     box-shadow:9px 11px 0 rgba(0,0,0,.72);
-    font-family:'Inter', system-ui, sans-serif;
+    font-family:var(--body-font);
     text-transform:none;
     transform:rotate(3deg);
   }
@@ -2846,12 +2849,12 @@
     color:#11100d;
     padding:0;
     margin:0 0 10px;
-    font-family:'Archivo Black', 'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:22px;
   }
   .price-note span{
     color:#2e7d38;
-    font-family:'Archivo Black', 'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:36px;
   }
   .hero-v4-notifs{display:none !important;}
@@ -2864,7 +2867,7 @@
     justify-content:center;
     border:6px solid #050504;
     box-shadow:7px 8px 0 rgba(0,0,0,.68);
-    font-family:'Archivo Black', 'Anton', sans-serif;
+    font-family:var(--title-font);
     text-transform:uppercase;
     line-height:1;
     pointer-events:none;
@@ -2911,7 +2914,7 @@
   .hero-orbit text{
     color:#f5eddc;
     fill:#f5eddc;
-    font-family:'Archivo Black', 'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:38px;
     text-transform:uppercase;
     letter-spacing:8px;
@@ -2937,7 +2940,7 @@
     gap:24px;
     padding:16px 0;
     color:#f5eddc;
-    font-family:'Archivo Black', 'Anton', sans-serif;
+    font-family:var(--title-font);
     font-size:28px;
     font-style:italic;
     text-transform:uppercase;
@@ -3042,7 +3045,7 @@
     color:#050504 !important;
     -webkit-text-fill-color:#050504 !important;
     box-shadow:8px 9px 0 rgba(0,0,0,.72) !important;
-    font-family:'Archivo Black', 'Anton', sans-serif !important;
+    font-family:var(--title-font) !important;
     font-size:clamp(15px, 1.3vw, 20px) !important;
     font-weight:900 !important;
     letter-spacing:0 !important;
@@ -3095,7 +3098,7 @@
   .btn-primary [data-cta-copy-short],
   .nav-cta [data-cta-copy-short],
   .float-cta [data-cta-copy-short]{
-    font-family:'Archivo Black', 'Anton', sans-serif !important;
+    font-family:var(--title-font) !important;
     color:#050504 !important;
     -webkit-text-fill-color:#050504 !important;
   }
@@ -3336,7 +3339,7 @@
     color:#050504 !important;
     -webkit-text-fill-color:#050504 !important;
     box-shadow:4px 5px 0 rgba(0,0,0,.58);
-    font-family:'Special Elite', monospace;
+    font-family:var(--mono-font);
     font-size:13px;
     font-weight:900;
     text-decoration:none;
@@ -3346,7 +3349,7 @@
     justify-self:center;
     text-align:center;
     color:#f5eddc;
-    font-family:'Archivo Black', 'Anton', sans-serif;
+    font-family:var(--title-font);
     text-transform:uppercase;
   }
   .qr-test{
@@ -3393,7 +3396,7 @@
   .footer-disclaimer{
     margin:0;
     color:#d7ccb5;
-    font-family:'Inter', system-ui, sans-serif;
+    font-family:var(--body-font);
     font-size:12px;
     line-height:1.58;
   }
@@ -3417,7 +3420,7 @@
   .seo-search-card h2{
     margin:0 0 14px;
     color:#11100d !important;
-    font-family:'Archivo Black', 'Anton', sans-serif !important;
+    font-family:var(--title-font) !important;
     font-size:clamp(36px, 4.8vw, 72px);
     line-height:.92;
     text-transform:uppercase;
@@ -3429,7 +3432,7 @@
   .seo-search-card p{
     margin:0 0 16px;
     color:#302c25 !important;
-    font-family:'Inter', system-ui, sans-serif;
+    font-family:var(--body-font);
     font-size:18px;
     line-height:1.58;
   }
@@ -3449,7 +3452,7 @@
     background:#fff15d;
     color:#050504;
     box-shadow:4px 5px 0 rgba(0,0,0,.48);
-    font-family:'Special Elite', monospace;
+    font-family:var(--mono-font);
     font-weight:900;
     font-size:13px;
   }
@@ -3467,14 +3470,14 @@
     box-shadow:5px 6px 0 rgba(0,0,0,.38);
     padding:16px;
     color:#1c1914;
-    font-family:'Inter', system-ui, sans-serif;
+    font-family:var(--body-font);
     line-height:1.45;
   }
   .seo-search-list strong{
     display:block;
     margin-bottom:4px;
     color:#050504;
-    font-family:'Archivo Black', 'Anton', sans-serif;
+    font-family:var(--title-font);
     text-transform:uppercase;
   }
   @media (max-width:900px){
@@ -3935,7 +3938,9 @@
 
   /* Requested polish: Bagel titles, sticker ticker, QR and mobile scale */
   :root{
-    --title-font:'Bagel Fat One', 'Archivo Black', 'Anton', system-ui, sans-serif;
+    --title-font:'Bagel Fat One', Arial, sans-serif;
+    --mono-font:'Special Elite', 'Courier New', monospace;
+    --body-font:Arial, sans-serif;
   }
   .capy-headline,
   .section-title,
@@ -4139,6 +4144,225 @@
     }
   }
 
+  /* Final production normalization: only Bagel, typewriter and Arial */
+  html body,
+  html body *{
+    font-family:var(--body-font) !important;
+  }
+  .capy-headline,
+  .capy-headline *,
+  .section-title,
+  .section-title *,
+  .compare-title,
+  .compare-title *,
+  .final-cta h2,
+  .final-cta h2 *,
+  .seo-search-card h2,
+  .seo-search-card h2 *,
+  #como-funciona .step h3,
+  #como-funciona .step h3 *,
+  .benefit-card h3,
+  .benefit-card h3 *,
+  .compare-card h3,
+  .compare-card h3 *,
+  .faq summary,
+  .faq summary *,
+  .stat-num,
+  .stat-num *,
+  .step-num span,
+  .spam-badge,
+  .hero-ticker-track,
+  .hero-ticker-track span,
+  .mission-note strong,
+  .price-note b,
+  .price-note span,
+  .footer-qr-card strong,
+  .accent{
+    font-family:var(--title-font) !important;
+    font-weight:400 !important;
+    letter-spacing:.01em !important;
+  }
+  .section-tag,
+  .meme-ribbon,
+  .hero-v4-sub,
+  .hero-v4-trust span,
+  .hero-sticker,
+  .bubble,
+  .spam-notif,
+  .btn-primary,
+  .nav-cta,
+  .footer-social a,
+  .price-tag span{
+    font-family:var(--mono-font) !important;
+  }
+  .footer-disclaimer{
+    font-family:var(--body-font) !important;
+  }
+
+  .nav-inner{
+    display:grid !important;
+    grid-template-columns:1fr auto 1fr !important;
+    align-items:center !important;
+    justify-content:normal !important;
+    max-width:1220px !important;
+    margin:0 auto !important;
+    padding:18px 24px 8px !important;
+  }
+  .nav-brand{
+    position:relative !important;
+    left:auto !important;
+    top:auto !important;
+    grid-column:2 !important;
+    transform:none !important;
+    width:auto !important;
+    justify-self:center !important;
+  }
+  .nav-capy{
+    width:clamp(260px, 30vw, 360px) !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+  }
+  .nav-cta{
+    grid-column:3 !important;
+    justify-self:end !important;
+    margin-left:0 !important;
+  }
+
+  .hero-ticker{
+    min-height:108px !important;
+    display:flex !important;
+    align-items:center !important;
+  }
+  .hero-ticker-track{
+    min-height:96px !important;
+    padding:24px 22px !important;
+    align-items:center !important;
+  }
+  .hero-ticker-track span{
+    min-height:64px !important;
+    padding:13px 24px 15px !important;
+  }
+  .hero-ticker-icon{
+    width:58px !important;
+    height:58px !important;
+    object-fit:contain !important;
+  }
+
+  .footer-layout{
+    grid-template-columns:minmax(280px, 1fr) minmax(120px, .45fr) minmax(320px, .85fr) !important;
+    align-items:start !important;
+    gap:40px !important;
+    text-align:left !important;
+  }
+  .footer-brand-block{
+    grid-column:1 !important;
+    max-width:620px !important;
+  }
+  .footer-spacer{
+    display:block !important;
+    min-height:1px !important;
+  }
+  .footer-logo-img{
+    width:min(310px, 72vw) !important;
+    margin:0 !important;
+  }
+  .footer-social{
+    justify-content:flex-start !important;
+  }
+  .footer-disclaimer{
+    margin:2px 0 0 !important;
+    max-width:620px !important;
+    color:#f2ead8 !important;
+    -webkit-text-fill-color:#f2ead8 !important;
+    text-align:left !important;
+    font-size:13px !important;
+    line-height:1.56 !important;
+    text-transform:none !important;
+  }
+  .footer-qr-card{
+    grid-column:3 !important;
+    justify-self:end !important;
+    align-self:start !important;
+    width:auto !important;
+    padding:0 !important;
+  }
+  .qr-link{
+    width:min(330px, 100%) !important;
+    margin:0 0 14px auto !important;
+  }
+
+  @media (max-width:820px){
+    .nav-inner{
+      grid-template-columns:1fr !important;
+      justify-items:center !important;
+      gap:10px !important;
+      padding:14px 16px 8px !important;
+    }
+    .nav-brand,
+    .nav-cta{
+      grid-column:1 !important;
+      justify-self:center !important;
+    }
+    .nav-capy{
+      width:min(220px, 64vw) !important;
+      max-height:none !important;
+    }
+    .nav-cta{
+      width:auto !important;
+      min-height:48px !important;
+      padding:10px 16px !important;
+      font-size:15px !important;
+    }
+    .hero-ticker{
+      min-height:88px !important;
+    }
+    .hero-ticker-track{
+      min-height:78px !important;
+      padding:16px 14px !important;
+    }
+    .hero-ticker-track span{
+      min-height:52px !important;
+      padding:9px 16px 11px !important;
+    }
+    .hero-ticker-icon{
+      width:48px !important;
+      height:48px !important;
+    }
+    .footer-layout{
+      grid-template-columns:1fr !important;
+      gap:24px !important;
+      text-align:left !important;
+    }
+    .footer-spacer{
+      display:none !important;
+    }
+    .footer-brand-block .brand{
+      justify-content:flex-start !important;
+    }
+    .footer-logo-img{
+      width:min(250px, 70vw) !important;
+      margin:0 !important;
+    }
+    .footer-social{
+      justify-content:flex-start !important;
+    }
+    .footer-disclaimer{
+      text-align:left !important;
+      font-size:12px !important;
+    }
+    .footer-qr-card{
+      grid-column:1 !important;
+      justify-self:center !important;
+      width:min(300px, 100%) !important;
+      text-align:center !important;
+    }
+    .qr-link{
+      width:min(260px, 76vw) !important;
+      margin:0 auto 14px !important;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -4149,7 +4373,7 @@
 <nav class="nav" data-screen-label="00 Nav">
   <div class="nav-inner">
     <a class="brand nav-brand" href="#top" aria-label="Detetive Kapi">
-      <img class="nav-capy" src="assets/kapi-logo-B.png" width="1077" height="670" alt="Detetive Kapi" decoding="async" fetchpriority="high" />
+      <img class="nav-capy" src="assets/kapi-logo-B.png" width="1581" height="968" alt="Detetive Kapi" decoding="async" fetchpriority="high" />
       <span class="nav-title">
         <strong>Kapi</strong>
         <small>Detetive Kapi de preços</small>
@@ -4669,7 +4893,7 @@
     <div class="footer-layout">
       <div class="footer-brand-block">
         <a class="brand" href="#top" aria-label="Detetive Kapi">
-          <img class="footer-logo-img" src="assets/kapi-logo-B.png" width="1077" height="670" alt="Detetive Kapi" loading="lazy" decoding="async" />
+          <img class="footer-logo-img" src="assets/kapi-logo-B.png" width="1581" height="968" alt="Detetive Kapi" loading="lazy" decoding="async" />
         </a>
         <p class="footer-msg">
           Seu pedido vira missão.<br/>
@@ -4683,7 +4907,11 @@
           <a href="termos.html">Termos de uso</a>
           <a href="privacidade.html">Privacidade</a>
         </nav>
+        <p class="footer-disclaimer" id="termos">
+          Aviso de Isenção de Responsabilidade: A detetive Kapi não faz garantias, representações ou promessas (sejam implícitas ou expressas) em relação à natureza, ao padrão, à disponibilidade de estoque ou à exatidão das informações, preços e promoções veiculados neste site, os quais estão sujeitos a alterações sem aviso prévio. Esta isenção de responsabilidade estende-se à adequação de tais informações para as suas circunstâncias específicas, sendo de responsabilidade exclusiva do usuário verificar a validade das ofertas e a disponibilidade dos produtos diretamente com os lojistas parceiros antes de realizar qualquer transação.
+        </p>
       </div>
+      <div class="footer-spacer" aria-hidden="true"></div>
       <div class="footer-qr-card" aria-label="QR Code para abrir a investigação no WhatsApp">
         <a class="qr-link" href="qr.html?src=footer_qr" data-qr-link aria-label="Abrir WhatsApp da Detetive Kapi pelo QR Code">
           <img class="qr-image" src="assets/qr-whatsapp.png" width="900" height="900" alt="QR Code para falar com a Detetive Kapi no WhatsApp" loading="eager" decoding="async" />
@@ -4691,9 +4919,6 @@
         </a>
         <strong>QR Code WhatsApp</strong>
       </div>
-      <p class="footer-disclaimer" id="termos">
-        Aviso de Isenção de Responsabilidade: A detetive Kapi não faz garantias, representações ou promessas (sejam implícitas ou expressas) em relação à natureza, ao padrão, à disponibilidade de estoque ou à exatidão das informações, preços e promoções veiculados neste site, os quais estão sujeitos a alterações sem aviso prévio. Esta isenção de responsabilidade estende-se à adequação de tais informações para as suas circunstâncias específicas, sendo de responsabilidade exclusiva do usuário verificar a validade das ofertas e a disponibilidade dos produtos diretamente com os lojistas parceiros antes de realizar qualquer transação.
-      </p>
     </div>
   </div>
 </footer>
