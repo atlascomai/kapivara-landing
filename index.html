@@ -1117,10 +1117,6 @@
   }
   .cta-proof strong{display:block; color:var(--ink); margin-bottom:4px;}
   .cta-proof span{font-size:14px; line-height:1.45;}
-  .footprints{
-    position:absolute; right:30px; bottom:14px; opacity:.55;
-  }
-
   /* ------------------ FOOTER ------------------ */
   .footer{
     padding:30px 0 50px;
@@ -3400,94 +3396,10 @@
     font-size:12px;
     line-height:1.58;
   }
-  .seo-search-section{
-    padding-top:20px !important;
-    padding-bottom:42px !important;
-  }
-  .seo-search-card{
-    display:grid;
-    grid-template-columns:minmax(0, .95fr) minmax(300px, .85fr);
-    gap:28px;
-    align-items:start;
-    border:7px solid #050504;
-    border-radius:24px;
-    background:#f7f5ef;
-    color:#11100d;
-    box-shadow:10px 12px 0 rgba(0,0,0,.72);
-    padding:34px;
-    transform:rotate(-.4deg);
-  }
-  .seo-search-card h2{
-    margin:0 0 14px;
-    color:#11100d !important;
-    font-family:var(--title-font) !important;
-    font-size:clamp(36px, 4.8vw, 72px);
-    line-height:.92;
-    text-transform:uppercase;
-  }
-  .seo-search-card h2 span{
-    color:#58c263;
-    text-shadow:2px 2px 0 #050504;
-  }
-  .seo-search-card p{
-    margin:0 0 16px;
-    color:#302c25 !important;
-    font-family:var(--body-font);
-    font-size:18px;
-    line-height:1.58;
-  }
-  .seo-keywords{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:20px;
-  }
-  .seo-keywords span{
-    display:inline-flex;
-    align-items:center;
-    min-height:38px;
-    padding:8px 12px;
-    border:4px solid #050504;
-    border-radius:999px;
-    background:#fff15d;
-    color:#050504;
-    box-shadow:4px 5px 0 rgba(0,0,0,.48);
-    font-family:var(--mono-font);
-    font-weight:900;
-    font-size:13px;
-  }
-  .seo-search-list{
-    display:grid;
-    gap:14px;
-    margin:0;
-    padding:0;
-    list-style:none;
-  }
-  .seo-search-list li{
-    border:5px solid #050504;
-    border-radius:16px;
-    background:#fff;
-    box-shadow:5px 6px 0 rgba(0,0,0,.38);
-    padding:16px;
-    color:#1c1914;
-    font-family:var(--body-font);
-    line-height:1.45;
-  }
-  .seo-search-list strong{
-    display:block;
-    margin-bottom:4px;
-    color:#050504;
-    font-family:var(--title-font);
-    text-transform:uppercase;
-  }
   @media (max-width:900px){
     .footer-layout{
       grid-template-columns:1fr;
       text-align:center;
-    }
-    .seo-search-card{
-      grid-template-columns:1fr;
-      padding:26px 22px;
     }
     .footer-msg{
       text-align:center !important;
@@ -3706,8 +3618,7 @@
     }
     .section-title,
     .compare-title,
-    .final-cta h2,
-    .seo-search-card h2{
+    .final-cta h2{
       font-size:clamp(38px, 12vw, 56px) !important;
       line-height:.94 !important;
       text-align:center !important;
@@ -3806,7 +3717,6 @@
     }
 
     .compare-wrap,
-    .seo-search-card,
     .final-cta,
     .faq details{
       border-width:5px !important;
@@ -3849,18 +3759,6 @@
     }
     #provas .section-title{
       font-size:clamp(32px, 9.5vw, 44px) !important;
-    }
-
-    .seo-search-card{
-      grid-template-columns:1fr !important;
-      padding:26px 18px !important;
-    }
-    .seo-keywords{
-      justify-content:center !important;
-    }
-    .seo-search-list li{
-      padding:14px !important;
-      border-width:4px !important;
     }
 
     .faq{
@@ -3946,7 +3844,6 @@
   .section-title,
   .compare-title,
   .final-cta h2,
-  .seo-search-card h2,
   #como-funciona .step h3,
   .benefit-card h3,
   .compare-card h3,
@@ -4100,8 +3997,7 @@
     }
     .section-title,
     .compare-title,
-    .final-cta h2,
-    .seo-search-card h2{
+    .final-cta h2{
       font-size:clamp(32px, 10vw, 48px) !important;
       line-height:1 !important;
     }
@@ -4157,8 +4053,6 @@
   .compare-title *,
   .final-cta h2,
   .final-cta h2 *,
-  .seo-search-card h2,
-  .seo-search-card h2 *,
   #como-funciona .step h3,
   #como-funciona .step h3 *,
   .benefit-card h3,
@@ -4363,6 +4257,239 @@
     }
   }
 
+  /* Final QA polish: one continuous canvas, tighter spacing, dark panels */
+  html,
+  body{
+    background:#151512 !important;
+    overflow-x:hidden !important;
+  }
+  body{
+    background:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,.045) 1px, transparent 1.75px) 0 0 / 8px 8px,
+      linear-gradient(180deg, #171713 0%, #121210 100%) fixed !important;
+    background-attachment:fixed !important;
+  }
+  .paper-noise,
+  .hero-v4::before,
+  .hero-v4::after,
+  .hero-v4 .news-spots{
+    display:none !important;
+    background:none !important;
+  }
+  .nav,
+  .hero-v4,
+  .product-demo,
+  .section,
+  #como-funciona,
+  .footer{
+    background:transparent !important;
+  }
+  .hero-v4{
+    padding-bottom:0 !important;
+  }
+  .hero-ticker{
+    margin-bottom:0 !important;
+  }
+  .product-demo{
+    padding-top:0 !important;
+    margin-top:0 !important;
+  }
+  .product-demo > .container{
+    margin-top:34px;
+  }
+  #como-funciona{
+    padding-top:46px !important;
+  }
+  #provas{
+    padding-top:34px !important;
+  }
+  [data-screen-label="05 Testimonials"]{
+    padding-top:20px !important;
+  }
+  [data-screen-label="06 Comparison"]{
+    padding-top:24px !important;
+  }
+  #faq{
+    padding-top:20px !important;
+    padding-bottom:22px !important;
+  }
+  #cta{
+    padding-top:0 !important;
+    padding-bottom:30px !important;
+  }
+  .mission-note,
+  .mission-note *{
+    font-family:var(--title-font) !important;
+    font-weight:400 !important;
+  }
+  .compare-wrap{
+    background:transparent !important;
+    border-color:transparent !important;
+    box-shadow:none !important;
+    padding:56px 0 20px !important;
+  }
+  .compare-table{
+    overflow:hidden;
+    border-top:4px solid rgba(245,237,220,.32) !important;
+    border-radius:24px;
+    background:rgba(5,5,4,.22);
+  }
+  .compare-table > div{
+    border-bottom:4px solid rgba(245,237,220,.28) !important;
+    color:#f5eddc !important;
+  }
+  .compare-head{
+    color:#f5eddc !important;
+  }
+  .compare-head.groups{
+    background:rgba(236,74,160,.24) !important;
+    color:#f5eddc !important;
+  }
+  .compare-head.capi{
+    background:rgba(88,194,99,.22) !important;
+    color:#f5eddc !important;
+  }
+  .compare-label{
+    color:#fff15d !important;
+  }
+  .compare-val{
+    color:#f5eddc !important;
+  }
+  .compare-card{
+    background:rgba(5,5,4,.44) !important;
+    border-color:rgba(245,237,220,.32) !important;
+    color:#f5eddc !important;
+  }
+  .compare-card h3,
+  .compare-card-row div{
+    color:#f5eddc !important;
+  }
+  .faq summary{
+    position:relative !important;
+    display:flex !important;
+    align-items:center !important;
+  }
+  .faq summary::after{
+    right:24px !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+    pointer-events:none !important;
+  }
+  .footer-social a[href$="termos.html"],
+  .footer-social a[href$="privacidade.html"]{
+    display:inline-flex !important;
+  }
+  .mobile-name-break{
+    display:none !important;
+  }
+  @media (max-width:620px){
+    .hero-v4{
+      overflow:hidden !important;
+      padding-top:22px !important;
+    }
+    .hero-v4-inner,
+    .hero-v4-grid,
+    .hero-v4-center{
+      width:100% !important;
+      max-width:100% !important;
+      overflow:hidden !important;
+    }
+    .hero-v4-center{
+      align-items:center !important;
+      text-align:center !important;
+      padding-inline:16px !important;
+      box-sizing:border-box !important;
+    }
+    .meme-ribbon{
+      max-width:270px !important;
+      padding:10px 14px !important;
+      font-size:11px !important;
+      line-height:1.15 !important;
+      letter-spacing:2px !important;
+      white-space:normal !important;
+      text-align:center !important;
+    }
+    .capy-headline{
+      width:100% !important;
+      max-width:270px !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+      font-size:clamp(34px, 9.6vw, 38px) !important;
+      line-height:.96 !important;
+      text-align:center !important;
+      overflow-wrap:normal !important;
+    }
+    .mobile-name-break{
+      display:block !important;
+    }
+    .capy-headline span{
+      display:block !important;
+    }
+    .hero-v4-sub{
+      max-width:270px !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+      font-size:16px !important;
+      line-height:1.36 !important;
+    }
+    .hero-v4-cta .btn-primary{
+      gap:10px !important;
+      padding:10px 12px !important;
+      font-size:12px !important;
+      line-height:1 !important;
+    }
+    .hero-v4-cta .btn-primary [data-cta-copy]{
+      white-space:nowrap !important;
+      font-size:12px !important;
+      line-height:1 !important;
+    }
+    .hero-v4-cta .btn-primary .btn-icon{
+      width:38px !important;
+      height:38px !important;
+    }
+    .hero-v4-cta,
+    .hero-v4-cta .btn-primary{
+      width:100% !important;
+      max-width:270px !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+      box-sizing:border-box !important;
+    }
+    .hero-v4-trust{
+      width:100% !important;
+      max-width:270px !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+    }
+    .hero-v4-trust span{
+      width:100% !important;
+      min-width:0 !important;
+      box-sizing:border-box !important;
+    }
+    .capy-visual{
+      width:100% !important;
+      max-width:100% !important;
+      overflow:hidden !important;
+    }
+  }
+
+  .hero-v4-cta .btn-investigate .btn-icon{
+    width:auto !important;
+    height:auto !important;
+    min-width:0 !important;
+    display:inline-flex !important;
+    place-items:unset !important;
+    background:transparent !important;
+    border-radius:0 !important;
+    color:#050504 !important;
+    box-shadow:none !important;
+  }
+  .hero-v4-cta .btn-investigate .btn-icon svg{
+    width:22px !important;
+    height:22px !important;
+    display:block !important;
+  }
+
 </style>
 </head>
 <body>
@@ -4379,7 +4506,7 @@
         <small>Detetive Kapi de preços</small>
       </span>
     </a>
-    <a class="nav-cta" href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20entrar%20na%20investiga%C3%A7%C3%A3o." data-whatsapp-link>
+    <a class="nav-cta" href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." data-whatsapp-link>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12l4-4h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
       <span data-cta-copy-short>Entrar na investigação</span>
     </a>
@@ -4395,9 +4522,9 @@
     <div class="hero-v4-grid">
 
       <div class="hero-v4-center">
-        <span class="meme-ribbon">chega de perder dinheiro!</span>
+        <span class="meme-ribbon">chega de jogar dinheiro fora</span>
         <h1 class="capy-headline">
-          Detetive Kapi<br/>
+          Detetive <br class="mobile-name-break"/>Kapi<br/>
           <span>pronta pra missão!</span>
         </h1>
 
@@ -4407,7 +4534,7 @@
         </p>
 
         <div class="hero-v4-cta">
-          <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20entrar%20na%20investiga%C3%A7%C3%A3o." class="btn-primary btn-investigate" data-whatsapp-link>
+          <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." class="btn-primary btn-investigate" data-whatsapp-link>
             <span class="btn-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
             </span>
@@ -4653,7 +4780,7 @@
     <div class="benefits-grid">
       <div class="benefit-card">
         <div class="benefit-icon">🔎</div>
-        <h3>Monitoramento sob demanda</h3>
+        <h3>Você escolhe o que quer</h3>
         <p>Você escolhe o item, marca ou categoria. Detetive Kapi acompanha aquilo que importa para você.</p>
       </div>
       <div class="benefit-card">
@@ -4670,11 +4797,11 @@
 
     <div class="stats">
       <div class="stat">
-        <div class="stat-num"><span class="accent" id="live-users-count" aria-live="polite">12.433</span></div>
+        <div class="stat-num"><span class="accent" id="live-users-count" aria-live="polite">13.904</span></div>
         <div class="stat-label">pessoas com a<br/>Detetive Kapi investigando <span class="live-dot" aria-hidden="true"></span></div>
       </div>
       <div class="stat">
-        <div class="stat-num money-stat"><span class="accent" id="savings-count" aria-live="polite">R$ 2.307.481,36</span></div>
+        <div class="stat-num money-stat"><span class="accent" id="savings-count" aria-live="polite">R$ 2.311.898,51</span></div>
         <div class="stat-label">economizados<br/>pelos usuários até agora.*</div>
       </div>
       <div class="stat">
@@ -4734,86 +4861,49 @@
     <div class="compare-wrap">
       <div class="compare-table">
         <div class="compare-head" style="background:transparent;"></div>
-        <div class="compare-head groups">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 20a5 5 0 0 1 10 0M11 20a5 5 0 0 1 10 0"/></svg>
-          Grupo de Achados
-        </div>
         <div class="compare-head capi">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5" stroke-linecap="round"/></svg>
           Detetive Kapi
         </div>
+        <div class="compare-head groups">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 20a5 5 0 0 1 10 0M11 20a5 5 0 0 1 10 0"/></svg>
+          Grupo de Achados
+        </div>
         <div class="compare-label">🔒 Seu número de telefone</div>
-        <div class="compare-val"><span class="pill-no">✕</span>Exposto pra centenas de estranhos no grupo.</div>
         <div class="compare-val"><span class="pill-yes">✓</span>Conversa privada, só você e Detetive Kapi.</div>
+        <div class="compare-val"><span class="pill-no">✕</span>Exposto pra centenas de estranhos no grupo.</div>
         <div class="compare-label">🛡 Risco de golpe / spam direto</div>
-        <div class="compare-val"><span class="pill-no">✕</span>Alto. Qualquer um pode capturar seu número.</div>
         <div class="compare-val"><span class="pill-yes">✓</span>Zero. Ninguém vê você.</div>
+        <div class="compare-val"><span class="pill-no">✕</span>Alto. Qualquer um pode capturar seu número.</div>
         <div class="compare-label">💬 Quantidade de mensagens</div>
-        <div class="compare-val"><span class="pill-no">✕</span>Centenas por dia</div>
         <div class="compare-val"><span class="pill-yes">✓</span>Poucas e relevantes</div>
+        <div class="compare-val"><span class="pill-no">✕</span>Centenas por dia</div>
         <div class="compare-label">🎯 Foco nas suas preferências</div>
-        <div class="compare-val"><span class="pill-no">✕</span>Nenhum. É pra todo mundo.</div>
         <div class="compare-val"><span class="pill-yes">✓</span>Total. Você escolhe.</div>
+        <div class="compare-val"><span class="pill-no">✕</span>Nenhum. É pra todo mundo.</div>
         <div class="compare-label">🔔 Aviso de queda de preço</div>
-        <div class="compare-val"><span class="pill-no">✕</span>Não. Só promoções aleatórias.</div>
         <div class="compare-val"><span class="pill-yes">✓</span>Sim! Na hora certa.</div>
+        <div class="compare-val"><span class="pill-no">✕</span>Não. Só promoções aleatórias.</div>
         <div class="compare-label">📩 Conteúdo relevante</div>
-        <div class="compare-val"><span class="pill-no">✕</span>Muita coisa que você não quer.</div>
         <div class="compare-val"><span class="pill-yes">✓</span>Só o que te interessa.</div>
+        <div class="compare-val"><span class="pill-no">✕</span>Muita coisa que você não quer.</div>
         <div class="compare-label">⏱ Tempo poupado</div>
-        <div class="compare-val"><span class="pill-no">✕</span>Horas perdidas</div>
         <div class="compare-val"><span class="pill-yes">✓</span>Muito mais</div>
+        <div class="compare-val"><span class="pill-no">✕</span>Horas perdidas</div>
         <div class="compare-label">😮‍💨 Estresse</div>
-        <div class="compare-val"><span class="pill-no">✕</span>Alto</div>
         <div class="compare-val"><span class="pill-yes">✓</span>Zero</div>
+        <div class="compare-val"><span class="pill-no">✕</span>Alto</div>
       </div>
       <div class="compare-cards" aria-label="Comparação em cards">
-        <div class="compare-card"><h3>🔒 Seu número de telefone</h3><div class="compare-card-row"><div><span class="pill-no">✕</span>Grupo: exposto pra centenas de estranhos.</div><div><span class="pill-yes">✓</span>Detetive Kapi: conversa privada.</div></div></div>
-        <div class="compare-card"><h3>🛡 Risco de golpe / spam direto</h3><div class="compare-card-row"><div><span class="pill-no">✕</span>Grupo: alto. Qualquer um te marca.</div><div><span class="pill-yes">✓</span>Detetive Kapi: zero. Ninguém vê você.</div></div></div>
-        <div class="compare-card"><h3>💬 Quantidade de mensagens</h3><div class="compare-card-row"><div><span class="pill-no">✕</span>Grupo: centenas por dia.</div><div><span class="pill-yes">✓</span>Detetive Kapi: poucas e relevantes.</div></div></div>
-        <div class="compare-card"><h3>🎯 Foco nas suas preferências</h3><div class="compare-card-row"><div><span class="pill-no">✕</span>Grupo: nenhum. É pra todo mundo.</div><div><span class="pill-yes">✓</span>Detetive Kapi: total. Você escolhe.</div></div></div>
-        <div class="compare-card"><h3>🔔 Aviso de queda de preço</h3><div class="compare-card-row"><div><span class="pill-no">✕</span>Grupo: só promoção aleatória.</div><div><span class="pill-yes">✓</span>Detetive Kapi: sim, na hora certa.</div></div></div>
-        <div class="compare-card"><h3>📩 Conteúdo relevante</h3><div class="compare-card-row"><div><span class="pill-no">✕</span>Grupo: muita coisa que você não quer.</div><div><span class="pill-yes">✓</span>Detetive Kapi: só o que te interessa.</div></div></div>
-        <div class="compare-card"><h3>⏱ Tempo poupado</h3><div class="compare-card-row"><div><span class="pill-no">✕</span>Grupo: horas perdidas.</div><div><span class="pill-yes">✓</span>Detetive Kapi: muito mais.</div></div></div>
-        <div class="compare-card"><h3>😮‍💨 Estresse</h3><div class="compare-card-row"><div><span class="pill-no">✕</span>Grupo: alto.</div><div><span class="pill-yes">✓</span>Detetive Kapi: zero.</div></div></div>
+        <div class="compare-card"><h3>🔒 Seu número de telefone</h3><div class="compare-card-row"><div><span class="pill-yes">✓</span>Detetive Kapi: conversa privada.</div><div><span class="pill-no">✕</span>Grupo: exposto pra centenas de estranhos.</div></div></div>
+        <div class="compare-card"><h3>🛡 Risco de golpe / spam direto</h3><div class="compare-card-row"><div><span class="pill-yes">✓</span>Detetive Kapi: zero. Ninguém vê você.</div><div><span class="pill-no">✕</span>Grupo: alto. Qualquer um te marca.</div></div></div>
+        <div class="compare-card"><h3>💬 Quantidade de mensagens</h3><div class="compare-card-row"><div><span class="pill-yes">✓</span>Detetive Kapi: poucas e relevantes.</div><div><span class="pill-no">✕</span>Grupo: centenas por dia.</div></div></div>
+        <div class="compare-card"><h3>🎯 Foco nas suas preferências</h3><div class="compare-card-row"><div><span class="pill-yes">✓</span>Detetive Kapi: total. Você escolhe.</div><div><span class="pill-no">✕</span>Grupo: nenhum. É pra todo mundo.</div></div></div>
+        <div class="compare-card"><h3>🔔 Aviso de queda de preço</h3><div class="compare-card-row"><div><span class="pill-yes">✓</span>Detetive Kapi: sim, na hora certa.</div><div><span class="pill-no">✕</span>Grupo: só promoção aleatória.</div></div></div>
+        <div class="compare-card"><h3>📩 Conteúdo relevante</h3><div class="compare-card-row"><div><span class="pill-yes">✓</span>Detetive Kapi: só o que te interessa.</div><div><span class="pill-no">✕</span>Grupo: muita coisa que você não quer.</div></div></div>
+        <div class="compare-card"><h3>⏱ Tempo poupado</h3><div class="compare-card-row"><div><span class="pill-yes">✓</span>Detetive Kapi: muito mais.</div><div><span class="pill-no">✕</span>Grupo: horas perdidas.</div></div></div>
+        <div class="compare-card"><h3>😮‍💨 Estresse</h3><div class="compare-card-row"><div><span class="pill-yes">✓</span>Detetive Kapi: zero.</div><div><span class="pill-no">✕</span>Grupo: alto.</div></div></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SEARCH INTENT / SEO COPY -->
-<section class="section seo-search-section" id="buscador-de-cupons" data-screen-label="07 Search SEO">
-  <div class="container">
-    <div class="seo-search-card">
-      <div>
-        <span class="section-tag">buscador de cupons</span>
-        <h2>Digite o que quer.<br/><span>Kapi busca por você.</span></h2>
-        <p>
-          A Detetive Kapi funciona como um buscador de cupons, achadinhos, promoções e quedas de preço.
-          Em vez de entrar em vários grupos de achados e procurar oferta manualmente, você informa no WhatsApp
-          o produto, marca, categoria ou link que quer acompanhar.
-        </p>
-        <p>
-          A Detetive Kapi entende pedidos como "tênis Nike", "celular em promoção", "fralda barata",
-          "air fryer com desconto", "cupom para eletrônico" ou "achadinhos de casa" e transforma cada busca
-          em uma investigação de preço personalizada.
-        </p>
-        <div class="seo-keywords" aria-label="Buscas relacionadas">
-          <span>grupo de achados</span>
-          <span>achadinhos</span>
-          <span>promoções no WhatsApp</span>
-          <span>buscador de promoções</span>
-          <span>alerta de preço</span>
-          <span>queda de preço</span>
-          <span>cupons e ofertas</span>
-        </div>
-      </div>
-      <ul class="seo-search-list">
-        <li><strong>Busca por cupons</strong>Você informa produto, categoria, marca, loja, preço desejado ou link.</li>
-        <li><strong>Achados personalizados</strong>Detetive Kapi procura cupons e promoções com base no que você quer comprar, não no que um grupo decidiu mandar.</li>
-        <li><strong>Menos grupo lotado</strong>Uma alternativa aos grupos de promoções, grupos de achadinhos e listas de ofertas que lotam o WhatsApp.</li>
-        <li><strong>Alerta relevante</strong>Quando a busca encontra uma queda de preço que faz sentido, o aviso chega direto no WhatsApp.</li>
-      </ul>
     </div>
   </div>
 </section>
@@ -4859,13 +4949,13 @@
 </section>
 
 <!-- FINAL CTA -->
-<section class="section" style="padding:10px 0 30px;" id="cta" data-screen-label="08 Final CTA">
+<section class="section" style="padding:0 0 30px;" id="cta" data-screen-label="08 Final CTA">
   <div class="container">
     <div class="final-cta final-cta-capy-only">
       <div>
         <h2>Adote você também<br/>a Detetive Kapi.</h2>
         <p>Fale com a <span class="accent">Detetive Kapi</span> no WhatsApp.<br/>Em 30 segundos ela já tá monitorando o que importa.</p>
-        <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20entrar%20na%20investiga%C3%A7%C3%A3o." class="btn-primary" id="main-cta" data-whatsapp-link>
+        <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." class="btn-primary" id="main-cta" data-whatsapp-link>
           <span class="btn-icon" style="background:#0d2a17; color:var(--green-bright);">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
           </span>
@@ -4876,11 +4966,6 @@
         <source type="image/webp" srcset="assets/savings-480.webp 480w, assets/savings.webp 1313w" sizes="(max-width: 900px) 82vw, 28vw" />
         <img class="cta-capy-art" src="assets/savings-fallback.jpg" width="1000" height="912" alt="Detetive Kapi segurando um cofrinho." loading="lazy" decoding="async" />
       </picture>
-      <svg class="footprints" width="60" height="30" viewBox="0 0 60 30" fill="rgba(255,255,255,0.18)">
-        <ellipse cx="8" cy="14" rx="4" ry="6"/><ellipse cx="6" cy="6" rx="1.4" ry="2"/><ellipse cx="9.5" cy="5" rx="1.4" ry="2"/>
-        <ellipse cx="30" cy="22" rx="4" ry="6"/><ellipse cx="28" cy="14" rx="1.4" ry="2"/><ellipse cx="31.5" cy="13" rx="1.4" ry="2"/>
-        <ellipse cx="52" cy="14" rx="4" ry="6"/><ellipse cx="50" cy="6" rx="1.4" ry="2"/><ellipse cx="53.5" cy="5" rx="1.4" ry="2"/>
-      </svg>
     </div>
   </div>
 </section>
@@ -4899,13 +4984,13 @@
           Seu pedido vira missão.<br/>
           <span class="accent">Detetive Kapi</span> vira sua detetive de preços.
         </p>
-        <nav class="footer-social" aria-label="Redes sociais">
+        <nav class="footer-social" aria-label="Links do rodapé">
           <a href="https://www.instagram.com/kapivara.co/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20entrar%20na%20investiga%C3%A7%C3%A3o." data-whatsapp-link>WhatsApp</a>
+          <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." data-whatsapp-link>WhatsApp</a>
           <a href="https://www.facebook.com/kapivara.co/" target="_blank" rel="noopener">Facebook</a>
           <a href="https://www.tiktok.com/@kapivara.co" target="_blank" rel="noopener">TikTok</a>
           <a href="termos.html">Termos de uso</a>
-          <a href="privacidade.html">Privacidade</a>
+          <a href="privacidade.html">Política de privacidade</a>
         </nav>
         <p class="footer-disclaimer" id="termos">
           Aviso de Isenção de Responsabilidade: A detetive Kapi não faz garantias, representações ou promessas (sejam implícitas ou expressas) em relação à natureza, ao padrão, à disponibilidade de estoque ou à exatidão das informações, preços e promoções veiculados neste site, os quais estão sujeitos a alterações sem aviso prévio. Esta isenção de responsabilidade estende-se à adequação de tais informações para as suas circunstâncias específicas, sendo de responsabilidade exclusiva do usuário verificar a validade das ofertas e a disponibilidade dos produtos diretamente com os lojistas parceiros antes de realizar qualquer transação.
@@ -4917,7 +5002,6 @@
           <img class="qr-image" src="assets/qr-whatsapp.png" width="900" height="900" alt="QR Code para falar com a Detetive Kapi no WhatsApp" loading="eager" decoding="async" />
           <img class="qr-capy" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
         </a>
-        <strong>QR Code WhatsApp</strong>
       </div>
     </div>
   </div>
@@ -4925,14 +5009,14 @@
 
 <!-- floating mobile CTA -->
 <div class="float-cta">
-  <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20entrar%20na%20investiga%C3%A7%C3%A3o." data-whatsapp-link>
+  <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." data-whatsapp-link>
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
     <span data-cta-copy-short>Entrar na investigação</span>
   </a>
 </div>
 
 <script>
-  const WHATSAPP_URL = 'https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20entrar%20na%20investiga%C3%A7%C3%A3o.';
+  const WHATSAPP_URL = 'https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto...';
   document.querySelectorAll('[data-whatsapp-link]').forEach((link) => {
     link.href = WHATSAPP_URL;
     link.rel = 'noopener';
@@ -5038,74 +5122,146 @@
   })();
 
   (function(){
-    const el = document.getElementById('live-users-count');
-    if (!el) return;
-    let count = 12433;
-    const fmt = (n) => n.toLocaleString('pt-BR');
-    el.textContent = fmt(count);
+    const usersEl = document.getElementById('live-users-count');
+    const savingsEl = document.getElementById('savings-count');
+    if (!usersEl && !savingsEl) return;
 
-    function bump(delta){
-      count += delta;
-      el.classList.remove('bump');
-      void el.offsetWidth;
-      el.textContent = fmt(count);
-      el.classList.add('bump');
-      setTimeout(() => el.classList.remove('bump'), 380);
-    }
-
-    function scheduleNext(){
-      const delay = 1400 + Math.random() * 2600;
-      const delta = Math.random() > .8 ? 2 : 1;
-      setTimeout(() => {
-        bump(delta);
-        scheduleNext();
-      }, delay);
-    }
-
-    scheduleNext();
-  })();
-
-  (function(){
-    const el = document.getElementById('savings-count');
-    if (!el) return;
-
-    let cents = 230748136;
-    const fmt = new Intl.NumberFormat('pt-BR', {
+    const DEFAULT_STATS = {
+      updatedAt: '2026-05-17T00:00:00-03:00',
+      people: {
+        base: 13904,
+        growthPerMinute: 0.38,
+        maxRandomStep: 2
+      },
+      totalSaved: {
+        baseCents: 231189851,
+        growthCentsPerMinute: 173,
+        maxRandomStepCents: 999
+      }
+    };
+    const STORAGE_KEY = 'detetive-kapi-stats-v1';
+    const userFmt = (n) => n.toLocaleString('pt-BR');
+    const moneyFmt = new Intl.NumberFormat('pt-BR', {
       style: 'currency',
       currency: 'BRL',
       minimumFractionDigits: 2,
       maximumFractionDigits: 2
     });
 
-    function render(){
-      el.textContent = fmt.format(cents / 100);
+    function readStored(){
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      } catch {
+        return {};
+      }
     }
 
-    function nextIncrement(){
-      const roll = Math.random();
-      if (roll < .18) return 1 + Math.floor(Math.random() * 9);
-      if (roll < .48) return 10 + Math.floor(Math.random() * 90);
-      if (roll < .78) return 100 + Math.floor(Math.random() * 300);
-      return 400 + Math.floor(Math.random() * 600);
+    function writeStored(values){
+      try {
+        const previous = readStored();
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+          people: Math.max(Number(previous.people) || 0, values.people),
+          totalSavedCents: Math.max(Number(previous.totalSavedCents) || 0, values.totalSavedCents),
+          updatedAt: new Date().toISOString()
+        }));
+      } catch {
+        /* localStorage can be blocked; the JSON source still keeps the baseline stable. */
+      }
     }
 
-    function bump(){
-      cents += Math.min(999, nextIncrement());
+    async function loadStats(){
+      try {
+        const response = await fetch('/api/stats', { cache: 'no-store' });
+        if (!response.ok) throw new Error('stats api unavailable');
+        return await response.json();
+      } catch {
+        /* Static/file preview fallback. Render serves /api/stats from server.js. */
+      }
+
+      try {
+        const response = await fetch('data/kapi-stats.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('stats source unavailable');
+        return await response.json();
+      } catch {
+        return DEFAULT_STATS;
+      }
+    }
+
+    function computeInitial(source){
+      const updatedAt = Date.parse(source.updatedAt || DEFAULT_STATS.updatedAt);
+      const minutes = Number.isFinite(updatedAt)
+        ? Math.max(0, (Date.now() - updatedAt) / 60000)
+        : 0;
+      const peopleBase = Number(source.people?.base) || DEFAULT_STATS.people.base;
+      const savedBase = Number(source.totalSaved?.baseCents) || DEFAULT_STATS.totalSaved.baseCents;
+      const peopleGrowth = Number(source.people?.growthPerMinute) || DEFAULT_STATS.people.growthPerMinute;
+      const savedGrowth = Number(source.totalSaved?.growthCentsPerMinute) || DEFAULT_STATS.totalSaved.growthCentsPerMinute;
+      const stored = source.persisted ? {} : readStored();
+
+      return {
+        people: Math.max(
+          peopleBase,
+          Math.floor(peopleBase + minutes * peopleGrowth),
+          Number(stored.people) || 0
+        ),
+        totalSavedCents: Math.max(
+          savedBase,
+          Math.floor(savedBase + minutes * savedGrowth),
+          Number(stored.totalSavedCents) || 0
+        ),
+        peopleMaxStep: Number(source.people?.maxRandomStep) || DEFAULT_STATS.people.maxRandomStep,
+        savedMaxStep: Number(source.totalSaved?.maxRandomStepCents) || DEFAULT_STATS.totalSaved.maxRandomStepCents
+      };
+    }
+
+    function pulse(el){
+      if (!el) return;
       el.classList.remove('bump');
       void el.offsetWidth;
-      render();
       el.classList.add('bump');
       setTimeout(() => el.classList.remove('bump'), 380);
-      scheduleNext();
     }
 
-    function scheduleNext(){
-      const delay = 650 + Math.random() * 2400;
-      setTimeout(bump, delay);
+    function render(values){
+      if (usersEl) usersEl.textContent = userFmt(values.people);
+      if (savingsEl) savingsEl.textContent = moneyFmt.format(values.totalSavedCents / 100);
+      writeStored(values);
     }
 
-    render();
-    scheduleNext();
+    function nextSavingsIncrement(maxStep){
+      const cappedMax = Math.max(1, Math.min(999, maxStep));
+      const roll = Math.random();
+      if (roll < .18) return 1 + Math.floor(Math.random() * Math.min(9, cappedMax));
+      if (roll < .48) return Math.min(cappedMax, 10 + Math.floor(Math.random() * 90));
+      if (roll < .78) return Math.min(cappedMax, 100 + Math.floor(Math.random() * 300));
+      return Math.min(cappedMax, 400 + Math.floor(Math.random() * 600));
+    }
+
+    loadStats().then((source) => {
+      const values = computeInitial(source);
+      render(values);
+
+      function scheduleUsers(){
+        setTimeout(() => {
+          values.people += Math.random() > .8 ? Math.min(2, values.peopleMaxStep) : 1;
+          render(values);
+          pulse(usersEl);
+          scheduleUsers();
+        }, 1400 + Math.random() * 2600);
+      }
+
+      function scheduleSavings(){
+        setTimeout(() => {
+          values.totalSavedCents += nextSavingsIncrement(values.savedMaxStep);
+          render(values);
+          pulse(savingsEl);
+          scheduleSavings();
+        }, 650 + Math.random() * 2400);
+      }
+
+      scheduleUsers();
+      scheduleSavings();
+    });
   })();
 </script>
 

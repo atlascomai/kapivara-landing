@@ -1,22 +1,25 @@
 services:
   - type: web
     name: kapivara-landing
-    runtime: static
+    runtime: node
     plan: free
-    buildCommand: "true"
-    staticPublishPath: .
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /healthz
     domains:
       - kapivara.co
-    headers:
-      - path: /*
-        name: X-Frame-Options
-        value: sameorigin
-      - path: /*
-        name: X-Content-Type-Options
-        value: nosniff
-      - path: /*
-        name: Referrer-Policy
-        value: strict-origin-when-cross-origin
-      - path: /assets/*
-        name: Cache-Control
-        value: public, max-age=31536000, immutable
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: STATS_CHECKPOINT_INTERVAL_MS
+        value: "10800000"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: kapivara-stats-db
+          property: connectionString
+
+databases:
+  - name: kapivara-stats-db
+    databaseName: kapivara_stats
+    user: kapivara_stats_user
+    plan: free

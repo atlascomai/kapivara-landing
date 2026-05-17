@@ -1,0 +1,16 @@
+{
+  "name": "kapivara-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page da Detetive Kapi com contador persistido no Render.",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "updatedAt": "2026-05-17T00:00:00-03:00",
+  "people": {
+    "label": "Pessoas",
+    "base": 13904,
+    "growthPerMinute": 0.38,
+    "maxRandomStep": 2
+  },
+  "totalSaved": {
+    "label": "Montante total economizado",
+    "baseCents": 231189851,
+    "growthCentsPerMinute": 173,
+    "maxRandomStepCents": 999
+  }
+}
