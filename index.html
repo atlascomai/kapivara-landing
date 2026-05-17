@@ -904,6 +904,15 @@
     letter-spacing:0;
     line-height:1;
   }
+  #savings-count{
+    display:inline-block;
+    font-family:var(--title-font) !important;
+    transform-origin:50% 58%;
+    will-change:transform;
+  }
+  #savings-count.roulette-spin{
+    animation:savingsRoulette .58s steps(8, end);
+  }
   .stat-num .tick{
     display:inline-block;
     transition: transform .35s cubic-bezier(.2,.9,.25,1.2), color .35s ease;
@@ -924,6 +933,13 @@
     0%   { box-shadow: 0 0 0 0 rgba(149,196,93,.55); }
     70%  { box-shadow: 0 0 0 8px rgba(149,196,93,0); }
     100% { box-shadow: 0 0 0 0 rgba(149,196,93,0); }
+  }
+  @keyframes savingsRoulette{
+    0%{transform:translateY(0) rotateX(0deg);}
+    20%{transform:translateY(-.12em) rotateX(38deg);}
+    45%{transform:translateY(.08em) rotateX(-32deg);}
+    70%{transform:translateY(-.05em) rotateX(22deg);}
+    100%{transform:translateY(0) rotateX(0deg);}
   }
   .stat-label{
     font-size:13px; color:#bfb59e; margin-top:12px; line-height:1.4;
@@ -1652,6 +1668,15 @@
     margin: 28px auto 0;
     display:flex; flex-direction:column; gap:14px; align-items:center;
   }
+  .section-cta-row{
+    display:flex;
+    justify-content:center;
+    margin:42px auto 0;
+  }
+  .section-cta-button{
+    justify-content:center;
+    min-width:min(100%, 320px);
+  }
   .btn-investigate{
     background: #1e6b3a !important;
     color:#050504 !important;
@@ -1683,6 +1708,8 @@
   }
   @media (max-width:760px){
     .btn-investigate{ min-width:0; width:100%; }
+    .section-cta-row{margin-top:32px;}
+    .section-cta-button{width:100%;}
   }
 
   .hero-v4-trust{
@@ -4685,6 +4712,14 @@
         </div>
       </div>
     </div>
+    <div class="section-cta-row">
+      <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." class="btn-primary btn-investigate section-cta-button" data-whatsapp-link>
+        <span class="btn-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
+        </span>
+        <span data-cta-copy>Entrar na investigação</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -4764,6 +4799,14 @@
         <p>Compra melhor, economiza dinheiro e fica feliz. Detetive Kapi mitou.</p>
       </div>
     </div>
+    <div class="section-cta-row">
+      <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." class="btn-primary btn-investigate section-cta-button" data-whatsapp-link>
+        <span class="btn-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
+        </span>
+        <span data-cta-copy>Entrar na investigação</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -4813,7 +4856,14 @@
         <div class="stat-label">spam. nunca.<br/>de verdade.</div>
       </div>
     </div>
-
+    <div class="section-cta-row">
+      <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." class="btn-primary btn-investigate section-cta-button" data-whatsapp-link>
+        <span class="btn-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
+        </span>
+        <span data-cta-copy>Entrar na investigação</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -4841,6 +4891,14 @@
         <p>"Era um caos. Agora é um WhatsApp em paz. E ainda economizo dinheiro de verdade."</p>
         <div class="who"><div class="avatar">CS</div><div><strong>Camila S.</strong><span>Recife · há 1 semana</span></div></div>
       </div>
+    </div>
+    <div class="section-cta-row">
+      <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." class="btn-primary btn-investigate section-cta-button" data-whatsapp-link>
+        <span class="btn-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
+        </span>
+        <span data-cta-copy>Entrar na investigação</span>
+      </a>
     </div>
   </div>
 </section>
@@ -4905,6 +4963,14 @@
         <div class="compare-card"><h3>😮‍💨 Estresse</h3><div class="compare-card-row"><div><span class="pill-yes">✓</span>Detetive Kapi: zero.</div><div><span class="pill-no">✕</span>Grupo: alto.</div></div></div>
       </div>
     </div>
+    <div class="section-cta-row">
+      <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." class="btn-primary btn-investigate section-cta-button" data-whatsapp-link>
+        <span class="btn-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
+        </span>
+        <span data-cta-copy>Entrar na investigação</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -4944,6 +5010,14 @@
         <summary>Meus dados estão seguros?</summary>
         <p>Seu número não fica exposto em grupos nem é compartilhado com outros usuários. Detetive Kapi usa a conversa para entender os itens que você quer monitorar.</p>
       </details>
+    </div>
+    <div class="section-cta-row">
+      <a href="https://wa.me/5511989419928?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." class="btn-primary btn-investigate section-cta-button" data-whatsapp-link>
+        <span class="btn-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
+        </span>
+        <span data-cta-copy>Entrar na investigação</span>
+      </a>
     </div>
   </div>
 </section>
@@ -5229,19 +5303,52 @@
       setTimeout(() => el.classList.remove('bump'), 380);
     }
 
-    function render(values){
-      if (usersEl) usersEl.textContent = userFmt(values.people);
-      if (savingsEl) savingsEl.textContent = moneyFmt.format(values.totalSavedCents / 100);
+    function shuffleDigits(text){
+      return text.replace(/\d/g, () => Math.floor(Math.random() * 10));
+    }
+
+    function spinSavings(finalText){
+      if (!savingsEl) return;
+      clearInterval(savingsEl._rouletteInterval);
+      clearTimeout(savingsEl._rouletteTimeout);
+
+      savingsEl.setAttribute('aria-label', finalText);
+      savingsEl.setAttribute('aria-busy', 'true');
+      savingsEl.classList.remove('roulette-spin');
+      void savingsEl.offsetWidth;
+      savingsEl.classList.add('roulette-spin');
+
+      const startedAt = performance.now();
+      const duration = 580;
+      savingsEl._rouletteInterval = setInterval(() => {
+        if (performance.now() - startedAt >= duration) return;
+        savingsEl.textContent = shuffleDigits(finalText);
+      }, 42);
+
+      savingsEl._rouletteTimeout = setTimeout(() => {
+        clearInterval(savingsEl._rouletteInterval);
+        savingsEl.textContent = finalText;
+        savingsEl.removeAttribute('aria-busy');
+        savingsEl.classList.remove('roulette-spin');
+      }, duration);
+    }
+
+    function render(values, options = {}){
+      if (usersEl && !options.skipUsers) usersEl.textContent = userFmt(values.people);
+      if (savingsEl && !options.skipSavings) {
+        const formattedSavings = moneyFmt.format(values.totalSavedCents / 100);
+        if (options.spinSavings) {
+          spinSavings(formattedSavings);
+        } else {
+          savingsEl.textContent = formattedSavings;
+          savingsEl.setAttribute('aria-label', formattedSavings);
+        }
+      }
       writeStored(values);
     }
 
-    function nextSavingsIncrement(maxStep){
-      const cappedMax = Math.max(1, Math.min(999, maxStep));
-      const roll = Math.random();
-      if (roll < .18) return 1 + Math.floor(Math.random() * Math.min(9, cappedMax));
-      if (roll < .48) return Math.min(cappedMax, 10 + Math.floor(Math.random() * 90));
-      if (roll < .78) return Math.min(cappedMax, 100 + Math.floor(Math.random() * 300));
-      return Math.min(cappedMax, 400 + Math.floor(Math.random() * 600));
+    function nextSavingsIncrement(){
+      return 11 + Math.floor(Math.random() * 89);
     }
 
     loadStats().then((source) => {
@@ -5251,7 +5358,7 @@
       function scheduleUsers(){
         setTimeout(() => {
           values.people += Math.random() > .8 ? Math.min(2, values.peopleMaxStep) : 1;
-          render(values);
+          render(values, { skipSavings: true });
           pulse(usersEl);
           scheduleUsers();
         }, 1400 + Math.random() * 2600);
@@ -5259,9 +5366,8 @@
 
       function scheduleSavings(){
         setTimeout(() => {
-          values.totalSavedCents += nextSavingsIncrement(values.savedMaxStep);
-          render(values);
-          pulse(savingsEl);
+          values.totalSavedCents += nextSavingsIncrement();
+          render(values, { skipUsers: true, spinSavings: true });
           scheduleSavings();
         }, 650 + Math.random() * 2400);
       }
