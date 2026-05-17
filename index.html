@@ -4520,6 +4520,83 @@
     display:block !important;
   }
 
+  .nav-cta,
+  .btn-primary,
+  .float-cta a{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:12px !important;
+    min-height:58px !important;
+    padding:16px 24px !important;
+    border:6px solid #050504 !important;
+    border-radius:8px !important;
+    background:#58c263 !important;
+    background-image:none !important;
+    color:#050504 !important;
+    -webkit-text-fill-color:#050504 !important;
+    box-shadow:8px 9px 0 rgba(0,0,0,.72) !important;
+    font-family:var(--title-font) !important;
+    font-size:clamp(13px, 1.25vw, 18px) !important;
+    font-weight:900 !important;
+    letter-spacing:0 !important;
+    line-height:1 !important;
+    text-transform:uppercase !important;
+    text-decoration:none !important;
+    transform:rotate(-1.5deg) !important;
+    transition:transform .14s ease, box-shadow .14s ease, background-color .14s ease !important;
+  }
+  .nav-cta:hover,
+  .btn-primary:hover,
+  .float-cta a:hover{
+    background:#72d86f !important;
+    transform:translateY(-2px) rotate(-1.5deg) !important;
+    box-shadow:10px 11px 0 rgba(0,0,0,.72) !important;
+  }
+  .nav-cta:active,
+  .btn-primary:active,
+  .float-cta a:active{
+    transform:translateY(3px) rotate(-1.5deg) !important;
+    box-shadow:4px 5px 0 rgba(0,0,0,.72) !important;
+  }
+  .btn-primary .btn-icon,
+  .hero-v4-cta .btn-primary .btn-icon,
+  .hero-v4-cta .btn-investigate .btn-icon,
+  .nav-cta > svg,
+  .float-cta a > svg{
+    flex:0 0 auto !important;
+    width:34px !important;
+    height:34px !important;
+    min-width:34px !important;
+    display:grid !important;
+    place-items:center !important;
+    box-sizing:border-box !important;
+    padding:8px !important;
+    border:0 !important;
+    border-radius:6px !important;
+    background:#f7f5ef !important;
+    color:#050504 !important;
+    -webkit-text-fill-color:#050504 !important;
+    box-shadow:none !important;
+  }
+  .btn-primary .btn-icon svg,
+  .hero-v4-cta .btn-investigate .btn-icon svg{
+    width:18px !important;
+    height:18px !important;
+    display:block !important;
+  }
+  .btn-primary [data-cta-copy],
+  .btn-primary [data-cta-copy-short],
+  .nav-cta [data-cta-copy-short],
+  .float-cta [data-cta-copy-short]{
+    font-family:var(--title-font) !important;
+    font-size:inherit !important;
+    line-height:1 !important;
+    color:#050504 !important;
+    -webkit-text-fill-color:#050504 !important;
+    white-space:nowrap !important;
+  }
+
 </style>
 </head>
 <body>
