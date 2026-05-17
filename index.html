@@ -913,6 +913,15 @@
   #savings-count.roulette-spin{
     animation:savingsRoulette .58s steps(8, end);
   }
+  #savings-count .savings-char{
+    display:inline-block;
+    font:inherit;
+  }
+  #savings-count .savings-char.is-rolling{
+    animation:savingsDigitRoll .58s steps(8, end);
+    transform-origin:50% 58%;
+    will-change:transform;
+  }
   .stat-num .tick{
     display:inline-block;
     transition: transform .35s cubic-bezier(.2,.9,.25,1.2), color .35s ease;
@@ -939,6 +948,13 @@
     20%{transform:translateY(-.12em) rotateX(38deg);}
     45%{transform:translateY(.08em) rotateX(-32deg);}
     70%{transform:translateY(-.05em) rotateX(22deg);}
+    100%{transform:translateY(0) rotateX(0deg);}
+  }
+  @keyframes savingsDigitRoll{
+    0%{transform:translateY(0) rotateX(0deg);}
+    20%{transform:translateY(-.16em) rotateX(42deg);}
+    45%{transform:translateY(.1em) rotateX(-34deg);}
+    70%{transform:translateY(-.06em) rotateX(24deg);}
     100%{transform:translateY(0) rotateX(0deg);}
   }
   .stat-label{
@@ -5383,8 +5399,39 @@
       setTimeout(() => el.classList.remove('bump'), 380);
     }
 
-    function shuffleDigits(text){
-      return text.replace(/\d/g, () => Math.floor(Math.random() * 10));
+    function getChangedDigitIndexes(previousText, finalText){
+      const indexes = new Set();
+      const previousDigits = Array.from(previousText || '').reduce((digits, char, index) => {
+        if (/\d/.test(char)) digits.push({ char, index });
+        return digits;
+      }, []);
+      const finalDigits = Array.from(finalText || '').reduce((digits, char, index) => {
+        if (/\d/.test(char)) digits.push({ char, index });
+        return digits;
+      }, []);
+
+      let previousIndex = previousDigits.length - 1;
+      for (let finalIndex = finalDigits.length - 1; finalIndex >= 0; finalIndex -= 1){
+        const previousDigit = previousDigits[previousIndex];
+        const finalDigit = finalDigits[finalIndex];
+        if (!previousDigit || previousDigit.char !== finalDigit.char) indexes.add(finalDigit.index);
+        previousIndex -= 1;
+      }
+      return indexes;
+    }
+
+    function renderSavingsText(finalText, rollingIndexes = new Set(), randomize = false){
+      if (!savingsEl) return;
+      const fragment = document.createDocumentFragment();
+      Array.from(finalText).forEach((char, index) => {
+        const span = document.createElement('span');
+        span.className = 'savings-char';
+        const shouldRoll = rollingIndexes.has(index) && /\d/.test(char);
+        if (shouldRoll) span.classList.add('is-rolling');
+        span.textContent = shouldRoll && randomize ? Math.floor(Math.random() * 10) : char;
+        fragment.appendChild(span);
+      });
+      savingsEl.replaceChildren(fragment);
     }
 
     function spinSavings(finalText){
@@ -5392,22 +5439,29 @@
       clearInterval(savingsEl._rouletteInterval);
       clearTimeout(savingsEl._rouletteTimeout);
 
+      const previousText = savingsEl.dataset.currentValue || savingsEl.textContent || '';
+      const rollingIndexes = getChangedDigitIndexes(previousText, finalText);
+      if (!rollingIndexes.size){
+        renderSavingsText(finalText);
+        savingsEl.dataset.currentValue = finalText;
+        savingsEl.setAttribute('aria-label', finalText);
+        return;
+      }
+
       savingsEl.setAttribute('aria-label', finalText);
       savingsEl.setAttribute('aria-busy', 'true');
       savingsEl.classList.remove('roulette-spin');
-      void savingsEl.offsetWidth;
-      savingsEl.classList.add('roulette-spin');
 
-      const startedAt = performance.now();
       const duration = 580;
       savingsEl._rouletteInterval = setInterval(() => {
-        if (performance.now() - startedAt >= duration) return;
-        savingsEl.textContent = shuffleDigits(finalText);
+        renderSavingsText(finalText, rollingIndexes, true);
       }, 42);
+      renderSavingsText(finalText, rollingIndexes, true);
 
       savingsEl._rouletteTimeout = setTimeout(() => {
         clearInterval(savingsEl._rouletteInterval);
-        savingsEl.textContent = finalText;
+        renderSavingsText(finalText);
+        savingsEl.dataset.currentValue = finalText;
         savingsEl.removeAttribute('aria-busy');
         savingsEl.classList.remove('roulette-spin');
       }, duration);
@@ -5420,7 +5474,8 @@
         if (options.spinSavings) {
           spinSavings(formattedSavings);
         } else {
-          savingsEl.textContent = formattedSavings;
+          renderSavingsText(formattedSavings);
+          savingsEl.dataset.currentValue = formattedSavings;
           savingsEl.setAttribute('aria-label', formattedSavings);
         }
       }
@@ -5449,7 +5504,7 @@
           values.totalSavedCents += nextSavingsIncrement();
           render(values, { skipUsers: true, spinSavings: true });
           scheduleSavings();
-        }, 650 + Math.random() * 2400);
+        }, 5000 + Math.random() * 3000);
       }
 
       scheduleUsers();
