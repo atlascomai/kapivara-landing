@@ -5170,12 +5170,19 @@
     }
 
     async function loadStats(){
-      try {
-        const response = await fetch('/api/stats', { cache: 'no-store' });
-        if (!response.ok) throw new Error('stats api unavailable');
-        return await response.json();
-      } catch {
-        /* Static/file preview fallback. Render serves /api/stats from server.js. */
+      const apiSources = [
+        '/api/stats',
+        'https://webhook.kapivara.co/api/stats'
+      ];
+
+      for (const apiSource of apiSources) {
+        try {
+          const response = await fetch(apiSource, { cache: 'no-store' });
+          if (!response.ok) throw new Error('stats api unavailable');
+          return await response.json();
+        } catch {
+          /* Try the next stats source. */
+        }
       }
 
       try {
