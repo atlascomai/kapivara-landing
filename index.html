@@ -10,7 +10,7 @@
 <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="application-name" content="Detetive Kapi" />
 <meta name="apple-mobile-web-app-title" content="Detetive Kapi" />
-<meta name="theme-color" content="#f47a1f" />
+<meta name="theme-color" content="#111113" />
 <meta name="color-scheme" content="light" />
 <meta name="language" content="pt-BR" />
 <meta name="geo.region" content="BR" />
@@ -3724,10 +3724,6 @@
       padding:12px 14px !important;
       font-size:15px !important;
       line-height:1.35 !important;
-      opacity:1 !important;
-      visibility:visible !important;
-      transform:none !important;
-      transition:none !important;
     }
 
     .steps,
@@ -4323,18 +4319,18 @@
     }
   }
 
-  /* Final QA polish: one continuous orange canvas, tighter spacing, dark panels */
+  /* Final QA polish: one continuous dark canvas, tighter spacing, dark panels */
   html,
   body{
-    background:#f47a1f !important;
+    background:#0b0b0d !important;
     overflow-x:hidden !important;
   }
   body{
     background:
-      radial-gradient(circle at 1px 1px, rgba(5,5,4,.10) 1px, transparent 1.75px) 0 0 / 8px 8px,
-      radial-gradient(ellipse at 12% 4%, rgba(255,241,93,.46), transparent 34%),
-      radial-gradient(ellipse at 88% 18%, rgba(88,194,99,.20), transparent 32%),
-      linear-gradient(180deg, #ff9b2f 0%, #f47a1f 48%, #dd5a11 100%) fixed !important;
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,.055) 1px, transparent 1.75px) 0 0 / 8px 8px,
+      radial-gradient(ellipse at 18% 0%, rgba(88,88,92,.48), transparent 38%),
+      radial-gradient(ellipse at 88% 18%, rgba(5,5,4,.72), transparent 34%),
+      linear-gradient(180deg, #303033 0%, #141416 48%, #050505 100%) fixed !important;
     background-attachment:fixed !important;
   }
   .paper-noise,
@@ -4357,6 +4353,52 @@
   }
   .hero-ticker{
     margin-bottom:0 !important;
+  }
+  .site-top-ticker{
+    grid-column:auto !important;
+    width:100vw !important;
+    margin:0 !important;
+    position:relative !important;
+    z-index:5 !important;
+  }
+  .site-top-ticker .hero-ticker-track{
+    gap:0 !important;
+    padding:24px 0 !important;
+    animation:ticker-roll 28s linear infinite !important;
+    will-change:transform !important;
+  }
+  .hero-ticker-set{
+    display:inline-flex !important;
+    align-items:center !important;
+    gap:16px !important;
+    flex:0 0 auto !important;
+    padding:0 22px !important;
+  }
+  .site-top-ticker .ticker-chip{
+    color:#050504 !important;
+    -webkit-text-fill-color:currentColor !important;
+  }
+  .site-top-ticker .ticker-zero,
+  .site-top-ticker .ticker-clean{
+    background:#f7f5ef !important;
+    color:#050504 !important;
+    transform:rotate(-2deg) !important;
+  }
+  .site-top-ticker .ticker-zap{
+    background:#58c263 !important;
+    color:#050504 !important;
+    transform:rotate(2deg) !important;
+  }
+  .site-top-ticker .ticker-kapi,
+  .site-top-ticker .ticker-price{
+    background:#ec4aa0 !important;
+    color:#fff !important;
+    transform:rotate(-1deg) !important;
+  }
+  .site-top-ticker .ticker-free{
+    background:#050504 !important;
+    color:#fff15d !important;
+    transform:rotate(2deg) !important;
   }
   .product-demo{
     padding-top:0 !important;
@@ -4398,19 +4440,21 @@
   }
   .section-title,
   .compare-title{
-    color:#11100d !important;
+    color:#f7f5ef !important;
   }
   .section-title .accent,
   .compare-title .capi{
-    color:#0e5f2c !important;
+    color:#58c263 !important;
   }
   .section-sub,
   .hero-v4-sub,
-  .benefit-card p,
-  .faq p,
   .footer-msg,
   .footer-tag{
-    color:#2a1b0d !important;
+    color:#f1ead8 !important;
+  }
+  .benefit-card p,
+  .faq p{
+    color:#211f1b !important;
   }
   .section-tag{
     background:rgba(255,241,93,.78) !important;
@@ -4873,9 +4917,9 @@
   .section-cta-row a.btn-primary,
   .final-cta a.btn-primary,
   .float-cta a{
-    width:300px !important;
+    width:410px !important;
     min-width:0 !important;
-    max-width:300px !important;
+    max-width:410px !important;
     flex:0 0 auto !important;
     box-sizing:border-box !important;
   }
@@ -4997,13 +5041,41 @@
     }
   }
   .capy-headline{
-    color:#11100d !important;
-    font-size:clamp(32px, 4.2vw, 52px) !important;
-    line-height:1.02 !important;
-    max-width:680px !important;
+    color:#f7f5ef !important;
+    font-size:clamp(48px, 5.2vw, 86px) !important;
+    line-height:.96 !important;
+    max-width:780px !important;
   }
   .capy-headline span{
-    color:#0e5f2c !important;
+    color:#58c263 !important;
+  }
+  .capy-headline,
+  .section-title,
+  .compare-title,
+  .final-cta h2{
+    color:#f7f5ef !important;
+    -webkit-text-fill-color:#f7f5ef !important;
+    -webkit-text-stroke:0 !important;
+    paint-order:normal !important;
+  }
+  .capy-headline span,
+  .section-title .accent,
+  .compare-title .capi,
+  .stat-num .accent{
+    color:#58c263 !important;
+    -webkit-text-fill-color:#58c263 !important;
+    -webkit-text-stroke:0 !important;
+    paint-order:normal !important;
+  }
+  #como-funciona .step h3,
+  .benefit-card h3,
+  .faq summary{
+    color:#050504 !important;
+    -webkit-text-fill-color:#050504 !important;
+  }
+  .compare-card h3{
+    color:#f5eddc !important;
+    -webkit-text-fill-color:#f5eddc !important;
   }
   @media (max-width:620px){
     .capy-headline{
@@ -5016,8 +5088,8 @@
     }
     .hero-v4-sub{
       max-width:360px !important;
-      color:#090704 !important;
-      -webkit-text-fill-color:#090704 !important;
+      color:#f1ead8 !important;
+      -webkit-text-fill-color:#f1ead8 !important;
       font-family:var(--body-font) !important;
       font-size:18px !important;
       font-weight:800 !important;
@@ -5037,8 +5109,8 @@
     }
   }
   .footer-msg{
-    color:#080604 !important;
-    -webkit-text-fill-color:#080604 !important;
+    color:#f1ead8 !important;
+    -webkit-text-fill-color:#f1ead8 !important;
     font-family:var(--body-font) !important;
     font-size:18px !important;
     font-weight:800 !important;
@@ -5125,6 +5197,27 @@
 <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 <div class="paper-noise"></div>
 
+<div class="hero-ticker site-top-ticker" aria-hidden="true">
+  <div class="hero-ticker-track">
+    <div class="hero-ticker-set">
+      <span class="ticker-chip ticker-zero">zero spam</span><img class="hero-ticker-icon" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
+      <span class="ticker-chip ticker-zap">dentro do zap</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
+      <span class="ticker-chip ticker-kapi">Detetive Kapi não dorme</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
+      <span class="ticker-chip ticker-free">100% grátis</span><img class="hero-ticker-icon" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
+      <span class="ticker-chip ticker-clean">sem enrolação</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
+      <span class="ticker-chip ticker-price">caiu o preço, a Kapi avisa</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
+    </div>
+    <div class="hero-ticker-set">
+      <span class="ticker-chip ticker-zero">zero spam</span><img class="hero-ticker-icon" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
+      <span class="ticker-chip ticker-zap">dentro do zap</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
+      <span class="ticker-chip ticker-kapi">Detetive Kapi não dorme</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
+      <span class="ticker-chip ticker-free">100% grátis</span><img class="hero-ticker-icon" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
+      <span class="ticker-chip ticker-clean">sem enrolação</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
+      <span class="ticker-chip ticker-price">caiu o preço, a Kapi avisa</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
+    </div>
+  </div>
+</div>
+
 <!-- NAV -->
 <nav class="nav" data-screen-label="00 Nav">
   <div class="nav-inner">
@@ -5206,23 +5299,6 @@
         <div class="price-note">
           <b>🚨 Air Fryer Ninja caiu!</b>
           De <s>R$ 899,90</s><br/><span>R$ 685,90</span>
-        </div>
-      </div>
-
-      <div class="hero-ticker" aria-hidden="true">
-        <div class="hero-ticker-track">
-          <span>zero spam</span><img class="hero-ticker-icon" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
-          <span>dentro do zap</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
-          <span>Detetive Kapi não dorme</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
-          <span>100% grátis</span><img class="hero-ticker-icon" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
-          <span>sem enrolação</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
-          <span>caiu o preço, a Kapi avisa</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
-          <span>zero spam</span><img class="hero-ticker-icon" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
-          <span>dentro do zap</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
-          <span>Detetive Kapi não dorme</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
-          <span>100% grátis</span><img class="hero-ticker-icon" src="assets/buying-128.webp" width="128" height="116" alt="" loading="lazy" decoding="async" />
-          <span>sem enrolação</span><img class="hero-ticker-icon" src="assets/investigating-480.webp" width="480" height="397" alt="" loading="lazy" decoding="async" />
-          <span>caiu o preço, a Kapi avisa</span><img class="hero-ticker-icon" src="assets/savings-128.webp" width="128" height="117" alt="" loading="lazy" decoding="async" />
         </div>
       </div>
 
@@ -5776,39 +5852,100 @@
   })();
 
   (function(){
-    const bubbles = Array.from(document.querySelectorAll('.chat-thread .bubble'));
+    const chatThread = document.querySelector('.chat-thread');
+    const bubbles = chatThread ? Array.from(chatThread.querySelectorAll('.bubble')) : [];
     if (!bubbles.length) return;
+    const chatSection = chatThread.closest('.product-demo') || chatThread;
 
     const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduceMotion || !('IntersectionObserver' in window)){
+    if (reduceMotion){
       bubbles.forEach((bubble) => bubble.classList.add('is-visible'));
       return;
     }
 
-    let hasPlayed = false;
-    function revealConversation(){
-      if (hasPlayed) return;
-      hasPlayed = true;
-      bubbles.forEach((bubble, index) => {
-        window.setTimeout(() => {
-          bubble.classList.add('is-visible');
-        }, index * 340);
-      });
+    let visibleCount = 0;
+    let lastScrollY = getScrollY();
+    let scrollIdleTimer = 0;
+    let scrollDelta = 0;
+    let lastRevealAt = 0;
+    const revealDistance = 132;
+    const revealCooldown = 320;
+
+    function getScrollY(){
+      const scroller = document.scrollingElement || document.documentElement || document.body;
+      return Math.max(
+        window.scrollY || 0,
+        window.pageYOffset || 0,
+        window.visualViewport ? window.visualViewport.pageTop || 0 : 0,
+        window.visualViewport ? window.visualViewport.offsetTop || 0 : 0,
+        scroller ? scroller.scrollTop || 0 : 0,
+        document.documentElement ? document.documentElement.scrollTop || 0 : 0,
+        document.body ? document.body.scrollTop || 0 : 0
+      );
     }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting){
-          revealConversation();
-          observer.disconnect();
-        }
-      });
-    }, {
-      threshold: 0.55,
-      rootMargin: '0px 0px -8% 0px'
-    });
+    function isChatInView(){
+      const rect = chatThread.getBoundingClientRect();
+      const sectionRect = chatSection.getBoundingClientRect();
+      return (
+        (rect.top < window.innerHeight * 0.98 && rect.bottom > 0) ||
+        (sectionRect.top < window.innerHeight * 0.92 && sectionRect.bottom > window.innerHeight * 0.08)
+      );
+    }
 
-    observer.observe(bubbles[0]);
+    function resetScrollProgress(){
+      scrollDelta = 0;
+    }
+
+    function scheduleScrollReset(){
+      window.clearTimeout(scrollIdleTimer);
+      scrollIdleTimer = window.setTimeout(resetScrollProgress, 280);
+    }
+
+    function revealNextBubble(){
+      if (visibleCount >= bubbles.length || !isChatInView()) return false;
+      bubbles[visibleCount].classList.add('is-visible');
+      visibleCount += 1;
+      return true;
+    }
+
+    function revealFromDownScroll(distanceDown){
+      if (distanceDown <= 0) return;
+      scheduleScrollReset();
+      if (!isChatInView()){
+        scrollDelta = 0;
+        return;
+      }
+      scrollDelta += distanceDown;
+      if (scrollDelta >= revealDistance && performance.now() - lastRevealAt >= revealCooldown){
+        revealNextBubble();
+        lastRevealAt = performance.now();
+        scrollDelta = 0;
+      }
+    }
+
+    function onKeyDown(event){
+      const downScrollKeys = ['ArrowDown', 'PageDown', ' ', 'Spacebar', 'End'];
+      if (downScrollKeys.includes(event.key)) revealFromDownScroll(revealDistance);
+    }
+
+    function trackScroll(){
+      const currentY = getScrollY();
+      const distanceDown = currentY - lastScrollY;
+      lastScrollY = currentY;
+      if (distanceDown <= 0){
+        scrollDelta = 0;
+      } else {
+        revealFromDownScroll(distanceDown);
+      }
+      window.requestAnimationFrame(trackScroll);
+    }
+
+    window.addEventListener('keydown', onKeyDown);
+    window.addEventListener('resize', () => {
+      lastScrollY = getScrollY();
+    }, { passive:true });
+    window.requestAnimationFrame(trackScroll);
   })();
 
   (function(){
