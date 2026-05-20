@@ -5380,7 +5380,7 @@
       </div>
       <div class="chat-demo" aria-label="Exemplo de conversa com Detetive Kapi no WhatsApp">
         <div class="chat-thread">
-          <div class="bubble bot">🕵️‍♂️ Prazer! Eu sou Detetive Kapi.</div>
+          <div class="bubble bot">🕵️‍♂️ Prazer! Eu sou a Detetive Kapi.</div>
           <div class="bubble bot">Minha missão é farejar os preços que ninguém mais vê.</div>
           <div class="bubble bot">O que vamos investigar hoje? 🔎</div>
           <div class="bubble user">Fraldas pra bebê</div>
@@ -5868,8 +5868,11 @@
     let scrollIdleTimer = 0;
     let scrollDelta = 0;
     let lastRevealAt = 0;
-    const revealDistance = 132;
-    const revealCooldown = 320;
+    const revealDistance = 108;
+    const revealCooldown = 240;
+    const tailRevealDistance = 24;
+    const tailRevealCooldown = 80;
+    const tailStartsAfter = 6;
 
     function getScrollY(){
       const scroller = document.scrollingElement || document.documentElement || document.body;
@@ -5909,6 +5912,14 @@
       return true;
     }
 
+    function getRevealDistance(){
+      return visibleCount >= tailStartsAfter ? tailRevealDistance : revealDistance;
+    }
+
+    function getRevealCooldown(){
+      return visibleCount >= tailStartsAfter ? tailRevealCooldown : revealCooldown;
+    }
+
     function revealFromDownScroll(distanceDown){
       if (distanceDown <= 0) return;
       scheduleScrollReset();
@@ -5917,16 +5928,17 @@
         return;
       }
       scrollDelta += distanceDown;
-      if (scrollDelta >= revealDistance && performance.now() - lastRevealAt >= revealCooldown){
+      const distanceToReveal = getRevealDistance();
+      if (scrollDelta >= distanceToReveal && performance.now() - lastRevealAt >= getRevealCooldown()){
         revealNextBubble();
         lastRevealAt = performance.now();
-        scrollDelta = 0;
+        scrollDelta = Math.max(0, scrollDelta - distanceToReveal);
       }
     }
 
     function onKeyDown(event){
       const downScrollKeys = ['ArrowDown', 'PageDown', ' ', 'Spacebar', 'End'];
-      if (downScrollKeys.includes(event.key)) revealFromDownScroll(revealDistance);
+      if (downScrollKeys.includes(event.key)) revealFromDownScroll(getRevealDistance());
     }
 
     function trackScroll(){
