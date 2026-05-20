@@ -10,8 +10,8 @@
 <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="application-name" content="Detetive Kapi" />
 <meta name="apple-mobile-web-app-title" content="Detetive Kapi" />
-<meta name="theme-color" content="#151512" />
-<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#f47a1f" />
+<meta name="color-scheme" content="light" />
 <meta name="language" content="pt-BR" />
 <meta name="geo.region" content="BR" />
 <link rel="canonical" href="https://kapivara.co/" />
@@ -4298,11 +4298,11 @@
       display:none !important;
     }
     .footer-brand-block .brand{
-      justify-content:flex-start !important;
+      justify-content:center !important;
     }
     .footer-logo-img{
       width:min(250px, 70vw) !important;
-      margin:0 !important;
+      margin:0 auto !important;
     }
     .footer-social{
       justify-content:flex-start !important;
@@ -4323,16 +4323,18 @@
     }
   }
 
-  /* Final QA polish: one continuous canvas, tighter spacing, dark panels */
+  /* Final QA polish: one continuous orange canvas, tighter spacing, dark panels */
   html,
   body{
-    background:#151512 !important;
+    background:#f47a1f !important;
     overflow-x:hidden !important;
   }
   body{
     background:
-      radial-gradient(circle at 1px 1px, rgba(255,255,255,.045) 1px, transparent 1.75px) 0 0 / 8px 8px,
-      linear-gradient(180deg, #171713 0%, #121210 100%) fixed !important;
+      radial-gradient(circle at 1px 1px, rgba(5,5,4,.10) 1px, transparent 1.75px) 0 0 / 8px 8px,
+      radial-gradient(ellipse at 12% 4%, rgba(255,241,93,.46), transparent 34%),
+      radial-gradient(ellipse at 88% 18%, rgba(88,194,99,.20), transparent 32%),
+      linear-gradient(180deg, #ff9b2f 0%, #f47a1f 48%, #dd5a11 100%) fixed !important;
     background-attachment:fixed !important;
   }
   .paper-noise,
@@ -4393,6 +4395,47 @@
     border-color:transparent !important;
     box-shadow:none !important;
     padding:56px 0 20px !important;
+  }
+  .section-title,
+  .compare-title{
+    color:#11100d !important;
+  }
+  .section-title .accent,
+  .compare-title .capi{
+    color:#0e5f2c !important;
+  }
+  .section-sub,
+  .hero-v4-sub,
+  .benefit-card p,
+  .faq p,
+  .footer-msg,
+  .footer-tag{
+    color:#2a1b0d !important;
+  }
+  .section-tag{
+    background:rgba(255,241,93,.78) !important;
+    color:#11100d !important;
+    border-color:rgba(5,5,4,.48) !important;
+  }
+  .capy-headline,
+  .capy-headline span,
+  .section-title,
+  .section-title .accent,
+  .compare-title,
+  .compare-title .capi,
+  .final-cta h2,
+  .stat-num,
+  .stat-num .accent,
+  #como-funciona .step h3,
+  .benefit-card h3,
+  .compare-card h3,
+  .faq summary{
+    text-shadow:none !important;
+  }
+  .final-cta p,
+  .final-cta p .accent{
+    color:#f5eddc !important;
+    text-shadow:none !important;
   }
   .compare-table{
     overflow:hidden;
@@ -4632,16 +4675,189 @@
     -webkit-text-fill-color:#050504 !important;
     white-space:nowrap !important;
   }
+  .nav-cta,
+  .hero-v4-cta .btn-primary,
+  .section-cta-button,
+  .final-cta .btn-primary{
+    width:min(300px, 100%) !important;
+    min-width:0 !important;
+    max-width:300px !important;
+    box-sizing:border-box !important;
+  }
+  .section-cta-row,
+  .hero-v4-cta{
+    width:100% !important;
+    justify-content:center !important;
+    align-items:center !important;
+  }
+  @media (max-width:620px){
+    .nav-inner{
+      display:grid !important;
+      grid-template-columns:1fr !important;
+      justify-items:center !important;
+      width:100% !important;
+    }
+    .nav-brand,
+    .nav-cta{
+      justify-self:center !important;
+    }
+    .nav-cta{
+      width:min(300px, calc(100vw - 56px)) !important;
+      max-width:min(300px, calc(100vw - 56px)) !important;
+      margin-inline:auto !important;
+      box-sizing:border-box !important;
+    }
+    .hero-v4-cta .btn-primary,
+    .section-cta-button,
+    .final-cta .btn-primary{
+      width:min(300px, calc(100vw - 56px)) !important;
+      max-width:min(300px, calc(100vw - 56px)) !important;
+      min-width:0 !important;
+    }
+    .meme-ribbon{
+      display:flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+      gap:10px !important;
+      width:min(330px, calc(100vw - 48px)) !important;
+      max-width:calc(100vw - 48px) !important;
+      margin-inline:auto !important;
+      text-align:center !important;
+      box-sizing:border-box !important;
+    }
+    .meme-ribbon::before,
+    .meme-ribbon::after{
+      flex:0 0 auto !important;
+      margin:0 !important;
+    }
+    .capy-visual{
+      min-height:360px !important;
+      display:grid !important;
+      place-items:center !important;
+      margin-top:18px !important;
+    }
+    .capy-visual::after,
+    .price-note,
+    .hero-sticker.free{
+      display:none !important;
+    }
+    .capy-visual img{
+      width:min(330px, 82vw) !important;
+      max-height:360px !important;
+      transform:none !important;
+      filter:drop-shadow(0 18px 16px rgba(5,5,4,.42)) !important;
+    }
+    .capy-visual::before{
+      left:50% !important;
+      top:6px !important;
+      z-index:5 !important;
+      transform:translateX(-50%) rotate(-4deg) !important;
+    }
+    .hero-sticker.zap{
+      left:2% !important;
+      top:26% !important;
+      transform:rotate(-8deg) !important;
+    }
+    .hero-sticker.real{
+      right:2% !important;
+      top:24% !important;
+      transform:rotate(7deg) !important;
+    }
+  }
+  .hero-sticker{
+    font-family:var(--title-font) !important;
+    font-weight:400 !important;
+    letter-spacing:.01em !important;
+    text-align:center !important;
+  }
+  .hero-sticker.promo{
+    left:13% !important;
+    top:10% !important;
+    padding:16px 24px !important;
+    background:#fff15d !important;
+    color:#050504 !important;
+    transform:rotate(5deg) !important;
+  }
+  .hero-sticker.cupom{
+    right:9% !important;
+    bottom:19% !important;
+    padding:14px 22px !important;
+    background:#f7f5ef !important;
+    color:#050504 !important;
+    transform:rotate(-6deg) !important;
+  }
+  .hero-sticker.queda{
+    left:7% !important;
+    bottom:18% !important;
+    padding:14px 22px !important;
+    background:#ec4aa0 !important;
+    color:#fff !important;
+    transform:rotate(7deg) !important;
+  }
+  @media (max-width:620px){
+    .capy-visual{
+      min-height:430px !important;
+      padding:0 10px !important;
+    }
+    .hero-sticker{
+      display:inline-flex !important;
+      max-width:132px !important;
+      padding:9px 11px !important;
+      border-width:4px !important;
+      font-size:15px !important;
+      line-height:.96 !important;
+      z-index:6 !important;
+    }
+    .hero-sticker.zap{
+      left:0 !important;
+      top:30% !important;
+      background:#fff15d !important;
+      transform:rotate(-8deg) !important;
+    }
+    .hero-sticker.real{
+      right:0 !important;
+      top:27% !important;
+      transform:rotate(7deg) !important;
+    }
+    .hero-sticker.free{
+      display:inline-flex !important;
+      left:50% !important;
+      bottom:0 !important;
+      background:#f7f5ef !important;
+      color:#050504 !important;
+      transform:translateX(-50%) rotate(-4deg) !important;
+    }
+    .hero-sticker.promo{
+      left:4% !important;
+      top:8% !important;
+      transform:rotate(5deg) !important;
+    }
+    .hero-sticker.cupom{
+      right:4% !important;
+      bottom:15% !important;
+      transform:rotate(-7deg) !important;
+    }
+    .hero-sticker.queda{
+      left:4% !important;
+      bottom:15% !important;
+      transform:rotate(7deg) !important;
+    }
+  }
   .footer{
-    background:#262626 !important;
+    background:transparent !important;
     background-image:none !important;
-    border-top-color:#262626 !important;
+    border-top-color:rgba(5,5,4,.18) !important;
     position:relative !important;
+    color:#11100d !important;
   }
   .footer::before,
   .footer::after{
     display:none !important;
     background:none !important;
+  }
+  .footer-disclaimer,
+  .footer-qr-card{
+    color:#2a1b0d !important;
   }
   main > .product-demo,
   #como-funciona,
@@ -4651,6 +4867,256 @@
   #faq,
   #cta{
     padding-bottom:60px !important;
+  }
+  .nav a.nav-cta,
+  .hero-v4-cta a.btn-primary,
+  .section-cta-row a.btn-primary,
+  .final-cta a.btn-primary,
+  .float-cta a{
+    width:300px !important;
+    min-width:0 !important;
+    max-width:300px !important;
+    flex:0 0 auto !important;
+    box-sizing:border-box !important;
+  }
+  .section-cta-row,
+  .hero-v4-cta{
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+  }
+  .float-cta{
+    text-align:center !important;
+  }
+  @media (max-width:620px){
+    .nav a.nav-cta,
+    .hero-v4-cta a.btn-primary,
+    .section-cta-row a.btn-primary,
+    .final-cta a.btn-primary,
+    .float-cta a{
+      width:min(300px, calc(100vw - 56px)) !important;
+      max-width:min(300px, calc(100vw - 56px)) !important;
+    }
+    #como-funciona .step{
+      padding-top:118px !important;
+    }
+    #como-funciona .step-num{
+      top:-24px !important;
+    }
+    #como-funciona .step-num span{
+      width:58px !important;
+      height:58px !important;
+      font-size:34px !important;
+      box-shadow:0 4px 0 rgba(0,0,0,.30) !important;
+    }
+    #como-funciona .step-icon{
+      top:34px !important;
+      width:64px !important;
+      height:64px !important;
+      border-radius:14px !important;
+    }
+    #como-funciona .step-icon svg{
+      width:32px !important;
+      height:32px !important;
+    }
+    #como-funciona .step{
+      padding-top:112px !important;
+    }
+    #como-funciona .step-num{
+      left:calc(50% - 38px) !important;
+      top:24px !important;
+      transform:translateX(-50%) rotate(-4deg) !important;
+      z-index:5 !important;
+    }
+    #como-funciona .step:nth-child(even) .step-num{
+      transform:translateX(-50%) rotate(4deg) !important;
+    }
+    #como-funciona .step-num span{
+      width:58px !important;
+      height:58px !important;
+      font-size:34px !important;
+    }
+    #como-funciona .step-icon{
+      left:calc(50% + 38px) !important;
+      top:24px !important;
+      width:58px !important;
+      height:58px !important;
+      border-radius:14px !important;
+      transform:translateX(-50%) rotate(3deg) !important;
+      z-index:4 !important;
+    }
+    #como-funciona .step-icon svg{
+      width:30px !important;
+      height:30px !important;
+    }
+    #cta .final-cta > div:first-child{
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:center !important;
+      width:100% !important;
+      max-width:100% !important;
+      text-align:center !important;
+    }
+    #cta .final-cta a.btn-primary{
+      width:min(280px, calc(100vw - 96px)) !important;
+      max-width:min(280px, calc(100vw - 96px)) !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+      padding-inline:10px !important;
+      gap:9px !important;
+      transform:rotate(-1deg) !important;
+    }
+    #cta .final-cta a.btn-primary [data-cta-copy]{
+      min-width:0 !important;
+      white-space:normal !important;
+      font-size:12px !important;
+      line-height:1.02 !important;
+      text-align:center !important;
+    }
+    #cta .final-cta a.btn-primary .btn-icon{
+      width:34px !important;
+      height:34px !important;
+      min-width:34px !important;
+      padding:8px !important;
+    }
+    .section-tag{
+      display:flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+      gap:10px !important;
+      width:min(330px, calc(100vw - 48px)) !important;
+      max-width:calc(100vw - 48px) !important;
+      margin-inline:auto !important;
+      text-align:center !important;
+      box-sizing:border-box !important;
+    }
+    .section-tag::before,
+    .section-tag::after{
+      flex:0 0 auto !important;
+      margin:0 !important;
+    }
+  }
+  .capy-headline{
+    color:#11100d !important;
+    font-size:clamp(32px, 4.2vw, 52px) !important;
+    line-height:1.02 !important;
+    max-width:680px !important;
+  }
+  .capy-headline span{
+    color:#0e5f2c !important;
+  }
+  @media (max-width:620px){
+    .capy-headline{
+      max-width:calc(100vw - 48px) !important;
+      font-size:clamp(32px, 10vw, 48px) !important;
+      line-height:1 !important;
+    }
+    .mobile-name-break{
+      display:none !important;
+    }
+    .hero-v4-sub{
+      max-width:360px !important;
+      color:#090704 !important;
+      -webkit-text-fill-color:#090704 !important;
+      font-family:var(--body-font) !important;
+      font-size:18px !important;
+      font-weight:800 !important;
+      line-height:1.38 !important;
+      letter-spacing:0 !important;
+    }
+    .hero-v4-cta{
+      width:100% !important;
+      max-width:none !important;
+      margin-left:0 !important;
+      margin-right:0 !important;
+      justify-content:center !important;
+    }
+    .hero-v4-cta a.btn-primary{
+      margin-left:auto !important;
+      margin-right:auto !important;
+    }
+  }
+  .footer-msg{
+    color:#080604 !important;
+    -webkit-text-fill-color:#080604 !important;
+    font-family:var(--body-font) !important;
+    font-size:18px !important;
+    font-weight:800 !important;
+    line-height:1.34 !important;
+    letter-spacing:0 !important;
+  }
+  .footer-msg .accent{
+    color:#076b32 !important;
+    -webkit-text-fill-color:#076b32 !important;
+    font-weight:900 !important;
+  }
+  @media (max-width:620px){
+    .footer-msg{
+      width:min(420px, calc(100vw - 48px)) !important;
+      margin:2px auto 0 !important;
+      font-size:18px !important;
+      line-height:1.32 !important;
+      text-align:center !important;
+    }
+  }
+  .footer-disclaimer{
+    color:#1b1209 !important;
+    -webkit-text-fill-color:#1b1209 !important;
+    max-width:760px !important;
+    padding:14px 16px !important;
+    border:2px solid rgba(5,5,4,.16) !important;
+    border-radius:8px !important;
+    background:rgba(255,244,216,.58) !important;
+    font-family:var(--body-font) !important;
+    font-size:14px !important;
+    font-weight:700 !important;
+    line-height:1.5 !important;
+    text-align:left !important;
+  }
+  @media (max-width:620px){
+    .footer-disclaimer{
+      width:calc(100vw - 32px) !important;
+      margin:14px auto 0 !important;
+      padding:14px !important;
+      font-size:14px !important;
+      line-height:1.45 !important;
+    }
+  }
+  .faq summary{
+    position:relative !important;
+    display:block !important;
+    box-sizing:border-box !important;
+    padding-right:104px !important;
+  }
+  .faq summary::after{
+    position:absolute !important;
+    right:28px !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+    display:grid !important;
+    place-items:center !important;
+    line-height:1 !important;
+    pointer-events:none !important;
+  }
+  @media (max-width:620px){
+    .faq details{
+      padding:0 !important;
+    }
+    .faq summary{
+      min-height:76px !important;
+      padding:20px 82px 20px 20px !important;
+      font-size:18px !important;
+      line-height:1.16 !important;
+    }
+    .faq summary::after{
+      right:18px !important;
+      width:44px !important;
+      height:44px !important;
+      font-size:28px !important;
+    }
+    .faq p{
+      padding:0 20px 24px !important;
+    }
   }
 
 </style>
@@ -4671,7 +5137,7 @@
     </a>
     <a class="nav-cta" href="https://wa.me/5511911070099?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." data-whatsapp-link>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12l4-4h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
-      <span data-cta-copy-short>Entrar na investigação</span>
+      <span data-cta-copy-short>Chamar a detetive Kapi no zap</span>
     </a>
   </div>
 </nav>
@@ -4701,7 +5167,7 @@
             <span class="btn-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
             </span>
-            <span data-cta-copy>Entrar na investigação</span>
+            <span data-cta-copy>Chamar a detetive Kapi no zap</span>
           </a>
         </div>
 
@@ -4726,6 +5192,9 @@
         <div class="hero-sticker zap">🔥 no zap</div>
         <div class="hero-sticker real">real?</div>
         <div class="hero-sticker free">grátis<br/>sem pegadinha</div>
+        <div class="hero-sticker promo">promo boa</div>
+        <div class="hero-sticker cupom">cupom?</div>
+        <div class="hero-sticker queda">preço caiu</div>
         <picture>
           <source type="image/webp" srcset="assets/investigating-480.webp 480w, assets/investigating-800.webp 800w, assets/investigating-1200.webp 1200w, assets/investigating.webp 1380w" sizes="(max-width: 620px) 92vw, (max-width: 900px) 88vw, 56vw" />
           <img src="assets/investigating-fallback.jpg" width="1200" height="991" alt="" decoding="async" fetchpriority="high" />
@@ -4853,7 +5322,7 @@
         <span class="btn-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
         </span>
-        <span data-cta-copy>Entrar na investigação</span>
+        <span data-cta-copy>Chamar a detetive Kapi no zap</span>
       </a>
     </div>
   </div>
@@ -4940,7 +5409,7 @@
         <span class="btn-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
         </span>
-        <span data-cta-copy>Entrar na investigação</span>
+        <span data-cta-copy>Chamar a detetive Kapi no zap</span>
       </a>
     </div>
   </div>
@@ -4997,7 +5466,7 @@
         <span class="btn-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
         </span>
-        <span data-cta-copy>Entrar na investigação</span>
+        <span data-cta-copy>Chamar a detetive Kapi no zap</span>
       </a>
     </div>
   </div>
@@ -5033,7 +5502,7 @@
         <span class="btn-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
         </span>
-        <span data-cta-copy>Entrar na investigação</span>
+        <span data-cta-copy>Chamar a detetive Kapi no zap</span>
       </a>
     </div>
   </div>
@@ -5104,7 +5573,7 @@
         <span class="btn-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
         </span>
-        <span data-cta-copy>Entrar na investigação</span>
+        <span data-cta-copy>Chamar a detetive Kapi no zap</span>
       </a>
     </div>
   </div>
@@ -5152,7 +5621,7 @@
         <span class="btn-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
         </span>
-        <span data-cta-copy>Entrar na investigação</span>
+        <span data-cta-copy>Chamar a detetive Kapi no zap</span>
       </a>
     </div>
   </div>
@@ -5169,7 +5638,7 @@
           <span class="btn-icon" style="background:#0d2a17; color:var(--green-bright);">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
           </span>
-          <span data-cta-copy>Entrar na investigação</span>
+          <span data-cta-copy>Chamar a detetive Kapi no zap</span>
         </a>
       </div>
       <picture class="cta-capy-art-wrap">
@@ -5221,7 +5690,7 @@
 <div class="float-cta">
   <a href="https://wa.me/5511911070099?text=Oi%2C%20Detetive%20Kapi.%20Quero%20abrir%20uma%20investiga%C3%A7%C3%A3o%20de%20um%20produto..." data-whatsapp-link>
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v15l5-5h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
-    <span data-cta-copy-short>Entrar na investigação</span>
+    <span data-cta-copy-short>Chamar a detetive Kapi no zap</span>
   </a>
 </div>
 
@@ -5232,7 +5701,7 @@
     link.rel = 'noopener';
   });
   document.querySelectorAll('[data-cta-copy], [data-cta-copy-short]').forEach((node) => {
-    node.textContent = 'Entrar na investigação';
+    node.textContent = 'Chamar a detetive Kapi no zap';
   });
 
   (function(){
@@ -5316,19 +5785,30 @@
       return;
     }
 
+    let hasPlayed = false;
+    function revealConversation(){
+      if (hasPlayed) return;
+      hasPlayed = true;
+      bubbles.forEach((bubble, index) => {
+        window.setTimeout(() => {
+          bubble.classList.add('is-visible');
+        }, index * 340);
+      });
+    }
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting){
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
+          revealConversation();
+          observer.disconnect();
         }
       });
     }, {
-      threshold: 0.35,
-      rootMargin: '0px 0px -18% 0px'
+      threshold: 0.55,
+      rootMargin: '0px 0px -8% 0px'
     });
 
-    bubbles.forEach((bubble) => observer.observe(bubble));
+    observer.observe(bubbles[0]);
   })();
 
   (function(){
