@@ -8,7 +8,7 @@ Este repositorio hoje e uma landing estatica publicada no Render como Static Sit
 
 Pontos relevantes:
 
-- `index.html` e `qr.html` apontam para `https://wa.me/5511911070099`.
+- `index.html` e `qr.html` apontam para `https://wa.me/5511989419928`.
 - `qr.html` tenta enviar `POST /api/qr-open`, mas esse endpoint nao existe neste repo.
 - O bloqueio atual da Meta/WhatsApp precisa ser isolado por provider, sender, WABA e Business Portfolio.
 
